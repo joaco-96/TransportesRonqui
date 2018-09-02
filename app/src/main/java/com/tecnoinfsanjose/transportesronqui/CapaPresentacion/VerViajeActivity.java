@@ -1,14 +1,12 @@
-package com.tecnoinfsanjose.transportesronqui;
+package com.tecnoinfsanjose.transportesronqui.CapaPresentacion;
 
 import android.content.Intent;
-import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
-import com.tecnoinfsanjose.transportesronqui.MainActivity;
 import com.tecnoinfsanjose.transportesronqui.R;
 
 public class VerViajeActivity extends AppCompatActivity {

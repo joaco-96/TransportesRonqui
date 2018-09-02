@@ -1,4 +1,4 @@
-package com.tecnoinfsanjose.transportesronqui;
+package com.tecnoinfsanjose.transportesronqui.CapaPresentacion;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -22,6 +22,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
+
+import com.tecnoinfsanjose.transportesronqui.R;
 
 import java.io.File;
 

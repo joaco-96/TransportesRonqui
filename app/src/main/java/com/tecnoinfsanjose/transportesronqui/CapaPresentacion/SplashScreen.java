@@ -1,11 +1,10 @@
-package com.tecnoinfsanjose.transportesronqui;
+package com.tecnoinfsanjose.transportesronqui.CapaPresentacion;
 
 import android.content.Intent;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.tecnoinfsanjose.transportesronqui.MainActivity;
 import com.tecnoinfsanjose.transportesronqui.R;
 
 public class SplashScreen extends AppCompatActivity {
