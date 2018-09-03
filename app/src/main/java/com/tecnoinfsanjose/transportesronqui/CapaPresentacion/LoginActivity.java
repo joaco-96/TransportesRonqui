@@ -37,16 +37,18 @@ public class LoginActivity extends AppCompatActivity {
                 }else{
                     String key;
                     try {
-                        key = new UsuarioControlador().login(CI,Password);
+                        key = new UsuarioControlador().login(CI,Password,getApplicationContext());
                         if(key.equals("")){
                             Toast.makeText(getApplicationContext(),"Usuario o Contraseña Incorrecta",Toast.LENGTH_LONG).show();
                             //SACAR ESTE CODIGO CUANDO CONSUMAMOS WEB SERVICES PARA QUE INICIE BIEN
                             Intent intent = new Intent (v.getContext(), MainActivity.class);
                             startActivityForResult(intent, 0);
+                            //HASTA ACA HAY QUE SACAR
                         }else{
                             SharedPreferences sharedPref = getSharedPreferences("USER_DATA",Context.MODE_PRIVATE);
                             SharedPreferences.Editor editor = sharedPref.edit();
                             editor.putString("USER_KEY",key);
+                            editor.putInt("USER_CI",CI);
                             editor.commit();
                             Intent intent = new Intent (v.getContext(), MainActivity.class);
                             startActivityForResult(intent, 0);
