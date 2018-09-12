@@ -7,12 +7,11 @@ public class Utilidades {
 
 
     public static final String TABLA_USUARIO="usuario";
-    public static final String CAMPO_KEY="key";
     public static final String CAMPO_PASSWORD="password";
     public static final String CAMPO_CI="ci";
 
     public static final String CREAR_TABLA_USUARIO =
-            "CREATE TABLE "+TABLA_USUARIO+" ( "+CAMPO_CI+" INTEGER, "+CAMPO_PASSWORD+" TEXT, "+CAMPO_KEY + "INTEGER )";
+            "CREATE TABLE "+TABLA_USUARIO+" ( "+CAMPO_CI+" INTEGER PRIMARY KEY, "+CAMPO_PASSWORD+" TEXT );";
 
 
 
