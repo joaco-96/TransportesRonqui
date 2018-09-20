@@ -1,7 +1,9 @@
-package com.tecnoinfsanjose.transportesronqui;
+package com.tecnoinfsanjose.transportesronqui.CapaPresentacion;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.tecnoinfsanjose.transportesronqui.R;
 
 public class VerInfoViajeActivity extends AppCompatActivity {
 

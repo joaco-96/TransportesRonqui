@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".VerInfoViajeActivity">
+    tools:context=".CapaPresentacion.VerInfoViajeActivity">
 
     <TextView
         android:id="@+id/txtinfo"
@@ -24,7 +24,7 @@
         android:layout_height="31dp"
         android:layout_alignParentTop="true"
         android:layout_alignStart="@+id/txtinfo"
-        android:layout_marginTop="117dp"
+        android:layout_marginTop="135dp"
         android:text="Origen"
         android:textSize="18sp"
         android:textStyle="bold" />
@@ -35,7 +35,7 @@
         android:layout_height="31dp"
         android:layout_alignParentTop="true"
         android:layout_alignStart="@+id/txtinfo"
-        android:layout_marginTop="184dp"
+        android:layout_marginTop="202dp"
         android:text="Destino:"
         android:textAlignment="viewStart"
         android:textSize="18sp"
@@ -58,7 +58,7 @@
         android:layout_height="31dp"
         android:layout_alignParentBottom="true"
         android:layout_alignStart="@+id/txtinfo"
-        android:layout_marginBottom="162dp"
+        android:layout_marginBottom="156dp"
         android:text="Contacto"
         android:textSize="18sp"
         android:textStyle="bold" />
