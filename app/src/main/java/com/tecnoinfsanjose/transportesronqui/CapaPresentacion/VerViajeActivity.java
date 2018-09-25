@@ -32,7 +32,7 @@ public class VerViajeActivity extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent (view.getContext(), FotoActivity.class);
+                Intent intent = new Intent (view.getContext(), VerInfoViajeActivity.class);
                 startActivityForResult(intent, 0);
             }
         });
