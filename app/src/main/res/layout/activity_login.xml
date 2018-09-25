@@ -24,7 +24,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="202dp"
         android:background="#11000000"
-        android:drawableLeft="@drawable/ic_user"
+        android:drawableLeft="@drawable/ic_action_name"
         android:ems="10"
         android:hint="Usuario"
         android:inputType="textPersonName" />
@@ -37,7 +37,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="135dp"
         android:background="#11000000"
-        android:drawableLeft="@drawable/ic_pass"
+        android:drawableLeft="@drawable/pass"
         android:ems="10"
         android:hint="Contraseña"
         android:inputType="textPassword" />
