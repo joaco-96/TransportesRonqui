@@ -28,7 +28,8 @@ public class LoginServicio {
     }
 
     public Usuario login(Usuario usu) throws Exception {
-        throw new Exception("No implemented");
+        usu.setKey("SoyLaKey");
+        return usu;
     }
 
     //IMPLEMENTAR CLASE ASYNCTASK
