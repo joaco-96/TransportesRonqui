@@ -1,14 +1,12 @@
-package com.tecnoinfsanjose.transportesronqui;
+package com.tecnoinfsanjose.transportesronqui.CapaPresentacion;
 
 import android.content.Intent;
-import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
-import com.tecnoinfsanjose.transportesronqui.MainActivity;
 import com.tecnoinfsanjose.transportesronqui.R;
 
 public class VerViajeActivity extends AppCompatActivity {
@@ -34,7 +32,7 @@ public class VerViajeActivity extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent (view.getContext(), FotoActivity.class);
+                Intent intent = new Intent (view.getContext(), VerInfoViajeActivity.class);
                 startActivityForResult(intent, 0);
             }
         });

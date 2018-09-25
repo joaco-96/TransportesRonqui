@@ -4,23 +4,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
-    tools:context=".LoginActivity">
+    android:background="#ffffff"
+    tools:context=".CapaPresentacion.LoginActivity">
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="261dp"
-        android:layout_height="127dp"
+        android:layout_width="332dp"
+        android:layout_height="193dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="59dp"
+        android:layout_marginTop="65dp"
         app:srcCompat="@drawable/logo" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/TextCI"
         android:layout_width="250dp"
         android:layout_height="40dp"
-        android:layout_centerInParent="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="202dp"
         android:background="#11000000"
         android:drawableLeft="@drawable/ic_user"
         android:ems="10"
@@ -28,12 +30,12 @@
         android:inputType="textPersonName" />
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/TextPassword"
         android:layout_width="250dp"
         android:layout_height="40dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="157dp"
+        android:layout_marginBottom="135dp"
         android:background="#11000000"
         android:drawableLeft="@drawable/ic_pass"
         android:ems="10"
@@ -41,12 +43,13 @@
         android:inputType="textPassword" />
 
     <Button
-        android:id="@+id/button7"
+        android:id="@+id/Btn_Ingresar"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="55dp"
+        android:background="#2674f3"
         android:text="Ingresar" />
 
 </RelativeLayout>
