@@ -5,9 +5,9 @@ public class Viaje {
     private  String Origen;
     private  String Destino;
     private  String Carga;
-    private int Contacto;
+    private long Contacto;
 
-    public Viaje(int id, String origen, String destino, String carga, int contacto) {
+    public Viaje(int id, String origen, String destino, String carga, long contacto) {
         Id = id;
         Origen = origen;
         Destino = destino;
@@ -47,11 +47,11 @@ public class Viaje {
         Carga = carga;
     }
 
-    public int getContacto() {
+    public long getContacto() {
         return Contacto;
     }
 
-    public void setContacto(int contacto) {
+    public void setContacto(long contacto) {
         Contacto = contacto;
     }
 }
