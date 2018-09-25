@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CapaPresentacion.VerInfoViajeActivity">
+
+    <TextView
+        android:id="@+id/txtinfo"
+        android:layout_width="351dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:text="Ver Informacion del Viaje"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtorigen"
+        android:layout_width="90dp"
+        android:layout_height="31dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/txtinfo"
+        android:layout_marginTop="135dp"
+        android:text="Origen"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtdestino"
+        android:layout_width="90dp"
+        android:layout_height="31dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/txtinfo"
+        android:layout_marginTop="202dp"
+        android:text="Destino:"
+        android:textAlignment="viewStart"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtcarga"
+        android:layout_width="90dp"
+        android:layout_height="31dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/txtinfo"
+        android:layout_marginBottom="225dp"
+        android:text="Tipo Carga"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtcontacto"
+        android:layout_width="90dp"
+        android:layout_height="31dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/txtinfo"
+        android:layout_marginBottom="156dp"
+        android:text="Contacto"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/txtorigen"
+        android:layout_alignEnd="@+id/txtinfo"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/txtdestino"
+        android:layout_alignEnd="@+id/txtinfo"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/editText3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/txtcarga"
+        android:layout_alignEnd="@+id/txtinfo"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/editText4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/txtcontacto"
+        android:layout_alignEnd="@+id/txtinfo"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="250dp"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="66dp"
+        android:text="Finalizar Viaje"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>
