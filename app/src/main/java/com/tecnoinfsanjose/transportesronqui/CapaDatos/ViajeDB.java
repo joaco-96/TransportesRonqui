@@ -18,7 +18,6 @@ public class ViajeDB {
             ConexionSQliteHelper conn = new ConexionSQliteHelper(context, "bdRonqui", null, 1);
 
             SQLiteDatabase db = conn.getWritableDatabase();
-            conn.onUpgrade(db, 1, 2);
 
             ContentValues values = new ContentValues();
             values.put(Utilidades.VIAJE_ID, viaje.getId());
@@ -48,17 +47,13 @@ public class ViajeDB {
         Cursor cursor=dbp.rawQuery("SELECT "+Utilidades.VIAJE_ID+","+Utilidades.VIAJE_ORIGEN+","+Utilidades.VIAJE_DESTINO+","+Utilidades.VIAJE_CARGA+","+Utilidades.VIAJE_CONTACTO+
                 " FROM "+Utilidades.TABLA_VIAJES,null);
 
-        cursor.moveToFirst();
-        if(cursor.getCount() != 0){
-            for(int i = 0;i < cursor.getCount(); i++) {
-                Viaje nuevo = new Viaje(Integer.valueOf(cursor.getString(0)),cursor.getString(1),cursor.getString(2),cursor.getString(3),Integer.valueOf(cursor.getString(4)));
-                viajes.add(nuevo);
-                cursor.moveToNext();
-            }
-            return viajes;
-        }else{
-            return null;
+        while (cursor.moveToNext()){
+            Viaje nuevo = new Viaje(Integer.valueOf(cursor.getString(0)),cursor.getString(1),cursor.getString(2),cursor.getString(3),Integer.valueOf(cursor.getString(4)));
+            viajes.add(nuevo);
         }
+        cursor.close();
+        return viajes;
+
 
     }
     public boolean deleteViaje(int id, Context context){

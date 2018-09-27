@@ -6,32 +6,9 @@
     android:layout_height="match_parent"
     tools:context=".CapaPresentacion.VerViajeActivity">
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="25dp"
-        android:text="lista de viajes"
-        android:textAlignment="center"
-        android:textSize="30sp" />
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="28dp"
-        android:text="Volver" />
-
-    <Button
-        android:id="@+id/button8"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:onClick="onclick"
-        android:text="Ver Info Viaje" />
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/listView"></ListView>
 
 </RelativeLayout>

@@ -17,7 +17,7 @@ public class UsuarioDB {
             ConexionSQliteHelper conn = new ConexionSQliteHelper(context, "bdRonqui", null, 1);
 
             SQLiteDatabase db = conn.getWritableDatabase();
-            conn.onUpgrade(db, 1, 2);
+
 
             ContentValues values = new ContentValues();
             values.put(Utilidades.CAMPO_CI, usu.getCi());
