@@ -23,5 +23,23 @@ public class MantenimientoActivity extends AppCompatActivity {
                 startActivityForResult(intent, 0);
             }
         });
+
+        Button btn2 = (Button) findViewById(R.id.button5);
+        btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent (v.getContext(), MantenimientoLista.class);
+                startActivityForResult(intent, 0);
+            }
+        });
+
+        Button btn3 = (Button) findViewById(R.id.button6);
+        btn3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent (v.getContext(), MantenimientoLista.class);
+                startActivityForResult(intent, 0);
+            }
+        });
     }
 }
