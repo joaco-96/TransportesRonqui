@@ -18,7 +18,7 @@ public class VerInfoViajeActivity extends AppCompatActivity {
         FinalizarViaje.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent (getApplicationContext(), FinalizarViaje.class);
+                Intent intent = new Intent (getApplicationContext(), FotoActivity.class);
                 startActivityForResult(intent, 0);
             }
         });

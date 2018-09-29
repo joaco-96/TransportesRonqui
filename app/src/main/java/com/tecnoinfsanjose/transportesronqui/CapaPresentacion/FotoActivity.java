@@ -33,8 +33,8 @@ import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
 
 public class FotoActivity extends AppCompatActivity {
 
-    private final String CARPETA_RAIZ="misImagenesPrueba/";
-    private final String RUTA_IMAGEN=CARPETA_RAIZ+"misFotos";
+    private final String CARPETA_RAIZ="MisImagenes/";
+    private final String RUTA_IMAGEN=CARPETA_RAIZ+"MisFotos";
 
     final int COD_SELECCIONA=10;
     final int COD_FOTO=20;
