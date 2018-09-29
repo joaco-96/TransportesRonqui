@@ -186,7 +186,7 @@ public class FotoActivity extends AppCompatActivity {
                             if (opciones[i].equals("Cargar Imagen")){
                                 Intent intent=new Intent(Intent.ACTION_GET_CONTENT, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
                                 intent.setType("image/");
-                                startActivityForResult(intent.createChooser(intent,"Seleccione la Aplicación"),COD_SELECCIONA+1);
+                                startActivityForResult(intent.createChooser(intent,"Seleccione la Aplicación"),COD_SELECCIONA+2);
                             }else{
                                 dialogInterface.dismiss();
                             }
@@ -279,11 +279,11 @@ public class FotoActivity extends AppCompatActivity {
                     break;
                 case COD_SELECCIONA+2:
                     Uri miPath2=data.getData();
-                    imagen1.setImageURI(miPath2);
+                    imagen2.setImageURI(miPath2);
                     break;
                 case COD_SELECCIONA+3:
                     Uri miPath3=data.getData();
-                    imagen1.setImageURI(miPath3);
+                    imagen3.setImageURI(miPath3);
                     break;
 
                 case COD_FOTO+1:

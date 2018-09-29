@@ -6,18 +6,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".CapaPresentacion.FotoActivity">
-    <!--android:paddingBottom="@dimen/activity_vertical_margin"-->
-    <!--android:paddingLeft="@dimen/activity_horizontal_margin"-->
-    <!--android:paddingRight="@dimen/activity_horizontal_margin"-->
-    <!--android:paddingTop="@dimen/activity_vertical_margin"-->
-    <!--tools:context="co.quindio.sena.obtenerimagenesfotogaleria.FotoActivity"-->
+
 
 
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="GESTIONAR IMAGEN"
+        android:text="Finalizar Viaje"
         android:textSize="25sp"
         android:textStyle="bold"
         android:layout_centerHorizontal="true"
@@ -42,7 +38,7 @@
         android:layout_height="87dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
-        android:layout_marginBottom="98dp"
+        android:layout_marginBottom="60dp"
         android:layout_marginStart="18dp"
         android:src="@drawable/img_base" />
 
@@ -85,5 +81,150 @@
         android:onClick="onclick"
         android:text="Selecciona Imagen"
         android:textColor="#ffff" />
+
+    <EditText
+        android:id="@+id/FVFecha"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="42dp"
+        android:layout_toEndOf="@+id/imagen1"
+        android:ems="10"
+        android:inputType="date"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/FVDestino"
+        android:layout_width="216dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="83dp"
+        android:layout_toEndOf="@+id/imagen1"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/FVToneladas"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_above="@+id/FVKms"
+        android:layout_marginBottom="-165dp"
+        android:layout_toEndOf="@+id/imagen1"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:selectAllOnFocus="true"
+        android:singleLine="true" />
+
+    <EditText
+        android:id="@+id/FVKms"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="165dp"
+        android:layout_toEndOf="@+id/imagen1"
+        android:ems="10"
+        android:inputType="numberSigned"
+        android:selectAllOnFocus="true"
+        android:singleLine="true" />
+
+    <EditText
+        android:id="@+id/FVRemito1"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="207dp"
+        android:layout_toEndOf="@+id/imagen1"
+        android:ems="10"
+        android:inputType="number"
+        android:selectAllOnFocus="true"
+        android:singleLine="true" />
+
+    <EditText
+        android:id="@+id/FVRemito2"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="227dp"
+        android:layout_toEndOf="@+id/imagen1"
+        android:ems="10"
+        android:inputType="number"
+        android:selectAllOnFocus="true"
+        android:singleLine="true" />
+
+    <EditText
+        android:id="@+id/editText10"
+        android:layout_width="250dp"
+        android:layout_height="75dp"
+        android:layout_above="@+id/imagen1"
+        android:layout_toEndOf="@+id/imagen1"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:selectAllOnFocus="true"
+        android:singleLine="true" />
+
+    <TextView
+        android:id="@+id/Fecha"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_alignBottom="@+id/FVFecha"
+        android:layout_alignStart="@+id/imagen1"
+        android:text="Fecha:"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/Destino"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_alignBottom="@+id/FVDestino"
+        android:layout_alignStart="@+id/imagen1"
+        android:text="Destino:"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/Toneladas"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_alignEnd="@+id/btnCargarImg1"
+        android:layout_below="@+id/FVDestino"
+        android:text="Toneladas:"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/Kms"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_alignBottom="@+id/FVKms"
+        android:layout_alignStart="@+id/imagen1"
+        android:text="Kms:"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/Remito1"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_alignBottom="@+id/FVRemito1"
+        android:layout_alignStart="@+id/imagen1"
+        android:text="Nro. Remito:"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/Remito2"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_alignBottom="@+id/FVRemito2"
+        android:layout_alignStart="@+id/imagen1"
+        android:text="Nro. Remito:"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/Observaciones"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/imagen1"
+        android:layout_marginBottom="180dp"
+        android:text="Comentario:"
+        android:textSize="18sp" />
 
 </RelativeLayout>

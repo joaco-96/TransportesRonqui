@@ -29,7 +29,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".CapaPresentacion.LoginActivity" />
-        <activity android:name=".CapaPresentacion.FotoActivity" />
+        <activity android:name=".CapaPresentacion.FotoActivity"/>
         <activity android:name=".CapaPresentacion.FinalizarViaje"
             tools:ignore="DuplicateActivity"></activity>
 
