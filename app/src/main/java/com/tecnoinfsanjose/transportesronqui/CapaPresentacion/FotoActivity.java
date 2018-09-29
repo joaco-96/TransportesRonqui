@@ -29,6 +29,7 @@ import java.io.File;
 
 import static android.Manifest.permission.CAMERA;
 import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
+import static com.tecnoinfsanjose.transportesronqui.R.id.btnCargarImg1;
 
 
 public class FotoActivity extends AppCompatActivity {
@@ -39,21 +40,33 @@ public class FotoActivity extends AppCompatActivity {
     final int COD_SELECCIONA=10;
     final int COD_FOTO=20;
 
-    Button botonCargar;
-    ImageView imagen;
+    Button botonCargar1;
+    ImageView imagen1;
+    Button botonCargar2;
+    ImageView imagen2;
+    Button botonCargar3;
+    ImageView imagen3;
     String path;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_foto);
 
-        imagen= (ImageView) findViewById(R.id.imagemId);
-        botonCargar= (Button) findViewById(R.id.btnCargarImg);
+        imagen1= (ImageView) findViewById(R.id.imagen1);
+        botonCargar1= (Button) findViewById(R.id.btnCargarImg1);
+        imagen2= (ImageView) findViewById(R.id.imagen2);
+        botonCargar2= (Button) findViewById(R.id.btnCargarImg2);
+        imagen3= (ImageView) findViewById(R.id.imagen3);
+        botonCargar3= (Button) findViewById(R.id.btnCargarImg3);
 
         if(validaPermisos()){
-            botonCargar.setEnabled(true);
+            botonCargar1.setEnabled(true);
+            botonCargar2.setEnabled(true);
+            botonCargar3.setEnabled(true);
         }else{
-            botonCargar.setEnabled(false);
+            botonCargar1.setEnabled(false);
+            botonCargar2.setEnabled(false);
+            botonCargar3.setEnabled(false);
         }
 
     }
@@ -86,7 +99,9 @@ public class FotoActivity extends AppCompatActivity {
         if(requestCode==100){
             if(grantResults.length==2 && grantResults[0]==PackageManager.PERMISSION_GRANTED
                     && grantResults[1]==PackageManager.PERMISSION_GRANTED){
-                botonCargar.setEnabled(true);
+                botonCargar1.setEnabled(true);
+                botonCargar2.setEnabled(true);
+                botonCargar3.setEnabled(true);
             }else{
                 solicitarPermisosManual();
             }
@@ -132,35 +147,81 @@ public class FotoActivity extends AppCompatActivity {
     }
 
     public void onclick(View view) {
-        cargarImagen();
+        cargarImagen(view.getId());
     }
 
-    private void cargarImagen() {
-
+    private void cargarImagen(final int id ) {
         final CharSequence[] opciones={"Tomar Foto","Cargar Imagen","Cancelar"};
         final AlertDialog.Builder alertOpciones=new AlertDialog.Builder(FotoActivity.this);
-        alertOpciones.setTitle("Seleccione una Opción");
-        alertOpciones.setItems(opciones, new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialogInterface, int i) {
-                if (opciones[i].equals("Tomar Foto")){
-                    tomarFotografia();
-                }else{
-                    if (opciones[i].equals("Cargar Imagen")){
-                        Intent intent=new Intent(Intent.ACTION_GET_CONTENT, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-                        intent.setType("image/");
-                        startActivityForResult(intent.createChooser(intent,"Seleccione la Aplicación"),COD_SELECCIONA);
-                    }else{
-                        dialogInterface.dismiss();
+        switch (id){
+            case R.id.btnCargarImg1:
+
+                alertOpciones.setTitle("Seleccione una Opción");
+                alertOpciones.setItems(opciones, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        if (opciones[i].equals("Tomar Foto")){
+                            tomarFotografia(id);
+                        }else{
+                            if (opciones[i].equals("Cargar Imagen")){
+                                Intent intent=new Intent(Intent.ACTION_GET_CONTENT, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+                                intent.setType("image/");
+                                startActivityForResult(intent.createChooser(intent,"Seleccione la Aplicación"),COD_SELECCIONA+1);
+                            }else{
+                                dialogInterface.dismiss();
+                            }
+                        }
                     }
-                }
-            }
-        });
-        alertOpciones.show();
+                });
+                alertOpciones.show();
+                break;
+            case R.id.btnCargarImg2:
+                alertOpciones.setTitle("Seleccione una Opción");
+                alertOpciones.setItems(opciones, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        if (opciones[i].equals("Tomar Foto")){
+                            tomarFotografia(id);
+                        }else{
+                            if (opciones[i].equals("Cargar Imagen")){
+                                Intent intent=new Intent(Intent.ACTION_GET_CONTENT, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+                                intent.setType("image/");
+                                startActivityForResult(intent.createChooser(intent,"Seleccione la Aplicación"),COD_SELECCIONA+1);
+                            }else{
+                                dialogInterface.dismiss();
+                            }
+                        }
+                    }
+                });
+                alertOpciones.show();
+                break;
+            case R.id.btnCargarImg3:
+                alertOpciones.setTitle("Seleccione una Opción");
+                alertOpciones.setItems(opciones, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        if (opciones[i].equals("Tomar Foto")){
+                            tomarFotografia(id);
+                        }else{
+                            if (opciones[i].equals("Cargar Imagen")){
+                                Intent intent=new Intent(Intent.ACTION_GET_CONTENT, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+                                intent.setType("image/");
+                                startActivityForResult(intent.createChooser(intent,"Seleccione la Aplicación"),COD_SELECCIONA+3);
+                            }else{
+                                dialogInterface.dismiss();
+                            }
+                        }
+                    }
+                });
+                alertOpciones.show();
+                break;
+        }
+
+
 
     }
 
-    private void tomarFotografia() {
+    private void tomarFotografia(int id) {
         File fileImagen=new File(Environment.getExternalStorageDirectory(),RUTA_IMAGEN);
         boolean isCreada=fileImagen.exists();
         String nombreImagen="";
@@ -190,7 +251,18 @@ public class FotoActivity extends AppCompatActivity {
         {
             intent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(imagen));
         }
-        startActivityForResult(intent,COD_FOTO);
+        switch (id){
+            case R.id.btnCargarImg1:
+                startActivityForResult(intent,COD_FOTO+1);
+                break;
+            case R.id.btnCargarImg2:
+                startActivityForResult(intent,COD_FOTO+2);
+                break;
+            case R.id.btnCargarImg3:
+                startActivityForResult(intent,COD_FOTO+3);
+                break;
+        }
+
 
         ////
     }
@@ -201,12 +273,20 @@ public class FotoActivity extends AppCompatActivity {
         if (resultCode==RESULT_OK){
 
             switch (requestCode){
-                case COD_SELECCIONA:
-                    Uri miPath=data.getData();
-                    imagen.setImageURI(miPath);
+                case COD_SELECCIONA+1:
+                    Uri miPath1=data.getData();
+                    imagen1.setImageURI(miPath1);
+                    break;
+                case COD_SELECCIONA+2:
+                    Uri miPath2=data.getData();
+                    imagen1.setImageURI(miPath2);
+                    break;
+                case COD_SELECCIONA+3:
+                    Uri miPath3=data.getData();
+                    imagen1.setImageURI(miPath3);
                     break;
 
-                case COD_FOTO:
+                case COD_FOTO+1:
                     MediaScannerConnection.scanFile(this, new String[]{path}, null,
                             new MediaScannerConnection.OnScanCompletedListener() {
                                 @Override
@@ -215,8 +295,34 @@ public class FotoActivity extends AppCompatActivity {
                                 }
                             });
 
-                    Bitmap bitmap= BitmapFactory.decodeFile(path);
-                    imagen.setImageBitmap(bitmap);
+                    Bitmap bitmap1= BitmapFactory.decodeFile(path);
+                    imagen1.setImageBitmap(bitmap1);
+
+                    break;
+                case COD_FOTO+2:
+                    MediaScannerConnection.scanFile(this, new String[]{path}, null,
+                            new MediaScannerConnection.OnScanCompletedListener() {
+                                @Override
+                                public void onScanCompleted(String path, Uri uri) {
+                                    Log.i("Ruta de almacenamiento","Path: "+path);
+                                }
+                            });
+
+                    Bitmap bitmap2= BitmapFactory.decodeFile(path);
+                    imagen2.setImageBitmap(bitmap2);
+
+                    break;
+                case COD_FOTO+3:
+                    MediaScannerConnection.scanFile(this, new String[]{path}, null,
+                            new MediaScannerConnection.OnScanCompletedListener() {
+                                @Override
+                                public void onScanCompleted(String path, Uri uri) {
+                                    Log.i("Ruta de almacenamiento","Path: "+path);
+                                }
+                            });
+
+                    Bitmap bitmap3= BitmapFactory.decodeFile(path);
+                    imagen3.setImageBitmap(bitmap3);
 
                     break;
             }
