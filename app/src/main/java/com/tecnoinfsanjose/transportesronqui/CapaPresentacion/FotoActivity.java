@@ -45,7 +45,7 @@ public class FotoActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_foto);
 
         imagen= (ImageView) findViewById(R.id.imagemId);
         botonCargar= (Button) findViewById(R.id.btnCargarImg);

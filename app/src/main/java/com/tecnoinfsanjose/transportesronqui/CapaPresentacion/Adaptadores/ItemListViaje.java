@@ -1,15 +1,16 @@
 package com.tecnoinfsanjose.transportesronqui.CapaPresentacion.Adaptadores;
 
 public class ItemListViaje {
-
+    private int Id;
     private String Titulo;
     private String Descripcion;
     private String Auxiliar;
 
-    public ItemListViaje(String titulo, String descripcion, String auxiliar) {
+    public ItemListViaje(int id,String titulo, String descripcion, String auxiliar) {
         Titulo = titulo;
         Descripcion = descripcion;
         Auxiliar = auxiliar;
+        Id = id;
     }
 
     public String getTitulo() {
@@ -34,5 +35,13 @@ public class ItemListViaje {
 
     public void setAuxiliar(String auxiliar) {
         Auxiliar = auxiliar;
+    }
+
+    public int getId() {
+        return Id;
+    }
+
+    public void setId(int id) {
+        Id = id;
     }
 }

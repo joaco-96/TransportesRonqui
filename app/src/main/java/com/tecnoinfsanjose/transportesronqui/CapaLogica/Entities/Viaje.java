@@ -1,6 +1,8 @@
 package com.tecnoinfsanjose.transportesronqui.CapaLogica.Entities;
 
-public class Viaje {
+import java.io.Serializable;
+
+public class Viaje implements Serializable {
     private int Id;
     private  String Origen;
     private  String Destino;

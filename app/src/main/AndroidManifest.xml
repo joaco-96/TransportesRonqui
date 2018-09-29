@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.tecnoinfsanjose.transportesronqui">
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -14,8 +15,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".CapaPresentacion.MainActivity" />
+        <activity android:name=".CapaPresentacion.VerInfoViajeActivity" />
         <activity android:name=".CapaPresentacion.MantenimientoActivity" />
         <activity android:name=".CapaPresentacion.VerViajeActivity" />
+        <activity android:name=".CapaPresentacion.FinalizarViaje"/>
         <activity
             android:name=".CapaPresentacion.SplashScreen"
             android:theme="@style/Theme.AppCompat.NoActionBar">
@@ -26,7 +29,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".CapaPresentacion.LoginActivity" />
-        <activity android:name=".CapaPresentacion.FotoActivity"></activity>
+        <activity android:name=".CapaPresentacion.FotoActivity" />
+        <activity android:name=".CapaPresentacion.FinalizarViaje"
+            tools:ignore="DuplicateActivity"></activity>
     </application>
 
 </manifest>
