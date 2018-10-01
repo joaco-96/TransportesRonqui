@@ -30,29 +30,23 @@ public class VerViajeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ver_viaje);
         listaViajes = new ArrayList<Viaje>();
-            listaViajes = new ViajeControlador().getViajes(getApplicationContext());
-        if(listaViajes!=null){
+        listaViajes = new ViajeControlador().getViajes(getApplicationContext());
+        if (listaViajes != null) {
             listView = (ListView) findViewById(R.id.listView);
-            adapter = new AdaptadorViaje(getApplicationContext(),listaViajes);
+            adapter = new AdaptadorViaje(getApplicationContext(), listaViajes);
             listView.setAdapter(adapter);
             listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
                 public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                    Intent intent = new Intent (getApplicationContext(), VerInfoViajeActivity.class);
-                    intent.putExtra("Viaje",listaViajes.get(i));
+                    Intent intent = new Intent(getApplicationContext(), VerInfoViajeActivity.class);
+                    intent.putExtra("Viaje", listaViajes.get(i));
                     startActivityForResult(intent, 0);
                 }
             });
 
-        }else{
+        } else {
 
         }
 
-
-
     }
-
-
-
-
 }
