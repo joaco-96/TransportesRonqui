@@ -8,25 +8,20 @@
     tools:context=".CapaPresentacion.FotoActivity">
 
 
-
-
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/textView"
+        android:layout_width="155dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
         android:text="Finalizar Viaje"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/textView" />
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
 
     <Button
         android:id="@+id/btnCargarImg1"
         android:layout_width="87dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="28dp"
         android:background="@color/colorPrimaryDark"
         android:onClick="onclick"
         android:text="Selecciona Imagen"
@@ -34,37 +29,28 @@
 
     <ImageView
         android:id="@+id/imagen1"
-        android:layout_width="108dp"
-        android:layout_height="87dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="60dp"
-        android:layout_marginStart="18dp"
+        android:layout_width="86dp"
+        android:layout_height="64dp"
         android:src="@drawable/img_base" />
 
     <ImageView
         android:id="@+id/imagen2"
-        android:layout_width="108dp"
-        android:layout_height="87dp"
-        android:layout_alignTop="@+id/imagen1"
-        android:layout_centerHorizontal="true"
-        app:srcCompat="@drawable/img_base" />
+        android:layout_width="86dp"
+        android:layout_height="64dp"
+        android:layout_marginEnd="34dp"
+        android:layout_marginStart="36dp" />
 
     <ImageView
         android:id="@+id/imagen3"
-        android:layout_width="108dp"
-        android:layout_height="87dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignTop="@+id/imagen1"
-        android:layout_marginEnd="19dp"
-        app:srcCompat="@drawable/img_base" />
+        android:layout_width="86dp"
+        android:layout_height="64dp" />
 
     <Button
         android:id="@+id/btnCargarImg2"
         android:layout_width="87dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="35dp"
         android:background="@color/colorPrimaryDark"
         android:onClick="onclick"
         android:text="Selecciona Imagen"
@@ -74,9 +60,6 @@
         android:id="@+id/btnCargarImg3"
         android:layout_width="87dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="27dp"
         android:background="@color/colorPrimaryDark"
         android:onClick="onclick"
         android:text="Selecciona Imagen"
@@ -84,11 +67,10 @@
 
     <EditText
         android:id="@+id/FVFecha"
-        android:layout_width="wrap_content"
+        android:layout_width="250dp"
         android:layout_height="40dp"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="42dp"
-        android:layout_toEndOf="@+id/imagen1"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="4dp"
         android:ems="10"
         android:inputType="date"
         android:selectAllOnFocus="true"
@@ -97,20 +79,16 @@
 
     <TextView
         android:id="@+id/FVDestino"
-        android:layout_width="216dp"
+        android:layout_width="250dp"
         android:layout_height="40dp"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="83dp"
-        android:layout_toEndOf="@+id/imagen1"
+        android:layout_marginBottom="7dp"
         android:textSize="18sp" />
 
     <EditText
         android:id="@+id/FVToneladas"
-        android:layout_width="wrap_content"
+        android:layout_width="250dp"
         android:layout_height="40dp"
-        android:layout_above="@+id/FVKms"
-        android:layout_marginBottom="-165dp"
-        android:layout_toEndOf="@+id/imagen1"
+        android:layout_marginBottom="9dp"
         android:ems="10"
         android:inputType="numberDecimal"
         android:selectAllOnFocus="true"
@@ -118,11 +96,9 @@
 
     <EditText
         android:id="@+id/FVKms"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="165dp"
-        android:layout_toEndOf="@+id/imagen1"
+        android:layout_width="250dp"
+        android:layout_height="39dp"
+        android:layout_marginBottom="12dp"
         android:ems="10"
         android:inputType="numberSigned"
         android:selectAllOnFocus="true"
@@ -130,11 +106,9 @@
 
     <EditText
         android:id="@+id/FVRemito1"
-        android:layout_width="wrap_content"
+        android:layout_width="250dp"
         android:layout_height="40dp"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="207dp"
-        android:layout_toEndOf="@+id/imagen1"
+        android:layout_marginBottom="12dp"
         android:ems="10"
         android:inputType="number"
         android:selectAllOnFocus="true"
@@ -142,11 +116,9 @@
 
     <EditText
         android:id="@+id/FVRemito2"
-        android:layout_width="wrap_content"
+        android:layout_width="250dp"
         android:layout_height="40dp"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="227dp"
-        android:layout_toEndOf="@+id/imagen1"
+        android:layout_marginBottom="8dp"
         android:ems="10"
         android:inputType="number"
         android:selectAllOnFocus="true"
@@ -155,9 +127,8 @@
     <EditText
         android:id="@+id/editText10"
         android:layout_width="250dp"
-        android:layout_height="75dp"
-        android:layout_above="@+id/imagen1"
-        android:layout_toEndOf="@+id/imagen1"
+        android:layout_height="71dp"
+        android:layout_marginBottom="8dp"
         android:ems="10"
         android:inputType="textMultiLine"
         android:selectAllOnFocus="true"
@@ -167,8 +138,9 @@
         android:id="@+id/Fecha"
         android:layout_width="100dp"
         android:layout_height="40dp"
-        android:layout_alignBottom="@+id/FVFecha"
-        android:layout_alignStart="@+id/imagen1"
+        android:layout_marginBottom="7dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginStart="16dp"
         android:text="Fecha:"
         android:textSize="18sp" />
 
@@ -176,8 +148,10 @@
         android:id="@+id/Destino"
         android:layout_width="100dp"
         android:layout_height="40dp"
-        android:layout_alignBottom="@+id/FVDestino"
-        android:layout_alignStart="@+id/imagen1"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="28dp"
         android:text="Destino:"
         android:textSize="18sp" />
 
@@ -185,8 +159,9 @@
         android:id="@+id/Toneladas"
         android:layout_width="100dp"
         android:layout_height="40dp"
-        android:layout_alignEnd="@+id/btnCargarImg1"
-        android:layout_below="@+id/FVDestino"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginStart="16dp"
         android:text="Toneladas:"
         android:textSize="18sp" />
 
@@ -194,8 +169,7 @@
         android:id="@+id/Kms"
         android:layout_width="100dp"
         android:layout_height="40dp"
-        android:layout_alignBottom="@+id/FVKms"
-        android:layout_alignStart="@+id/imagen1"
+        android:layout_marginBottom="12dp"
         android:text="Kms:"
         android:textSize="18sp" />
 
@@ -203,8 +177,9 @@
         android:id="@+id/Remito1"
         android:layout_width="100dp"
         android:layout_height="40dp"
-        android:layout_alignBottom="@+id/FVRemito1"
-        android:layout_alignStart="@+id/imagen1"
+        android:layout_marginBottom="12dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginStart="16dp"
         android:text="Nro. Remito:"
         android:textSize="18sp" />
 
@@ -212,8 +187,9 @@
         android:id="@+id/Remito2"
         android:layout_width="100dp"
         android:layout_height="40dp"
-        android:layout_alignBottom="@+id/FVRemito2"
-        android:layout_alignStart="@+id/imagen1"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginStart="16dp"
         android:text="Nro. Remito:"
         android:textSize="18sp" />
 
@@ -221,10 +197,15 @@
         android:id="@+id/Observaciones"
         android:layout_width="100dp"
         android:layout_height="40dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/imagen1"
-        android:layout_marginBottom="180dp"
+        android:layout_alignStart="@+id/imagen2"
+        android:layout_below="@+id/editText10"
+        android:layout_marginTop="-8dp"
         android:text="Comentario:"
         android:textSize="18sp" />
+
+    <android.support.constraint.Group
+        android:id="@+id/group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
 </RelativeLayout>
