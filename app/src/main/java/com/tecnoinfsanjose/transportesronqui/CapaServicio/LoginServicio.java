@@ -28,7 +28,7 @@ public class LoginServicio {
     }
 
     public Usuario login(Usuario usu) throws Exception {
-        usu.setKey("SoyLaKey");
+        usu.setKey("SoyLKey");
         return usu;
     }
 
