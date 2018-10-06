@@ -44,9 +44,8 @@ public class MainActivity extends AppCompatActivity {
                 Viaje viaje2 = new Viaje(2,"San Jose","Montevideo","Soja",98848100);
                 Viaje viaje3 = new Viaje(3,"San Jose","Montevideo","Soja",98848100);
                 Viaje viaje4 = new Viaje(4,"San Jose","Montevideo","Soja",98848100);
-                Viaje viaje5 = new Viaje(5,"San Jose","Montevideo","Soja",98848100);
-                Viaje viaje6 = new Viaje(6,"San Jose","Montevideo","Soja",98848100);
-                Viaje viaje7 = new Viaje(7,"San Jose","Montevideo","Soja",98848100);
+                Viaje viaje5 = new Viaje(5,"San Jose","Treinta y Tres","Maiz",98848100);
+                Viaje viaje6 = new Viaje(6,"San Jose","Canelones","Trigo",98848100);
                 ViajeDB DBViaje = new ViajeDB();
                 if(
                 DBViaje.PersistirViaje(viaje1, getApplicationContext())&&
@@ -54,8 +53,7 @@ public class MainActivity extends AppCompatActivity {
                 DBViaje.PersistirViaje(viaje3, getApplicationContext())&&
                 DBViaje.PersistirViaje(viaje4, getApplicationContext())&&
                 DBViaje.PersistirViaje(viaje5, getApplicationContext())&&
-                DBViaje.PersistirViaje(viaje6, getApplicationContext())&&
-                DBViaje.PersistirViaje(viaje7, getApplicationContext()))
+                DBViaje.PersistirViaje(viaje6, getApplicationContext()))
                 {
                     Toast.makeText(getApplicationContext(),"Datos Cargados Correctamente",Toast.LENGTH_LONG).show();
 

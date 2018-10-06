@@ -24,6 +24,7 @@ public class VerViajeActivity extends AppCompatActivity {
     private ListView listView;
     private AdaptadorViaje adapter;
     private List<Viaje> listaViajes;
+    Button volver;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +48,15 @@ public class VerViajeActivity extends AppCompatActivity {
         } else {
 
         }
+
+        volver = (Button)findViewById(R.id.button7);
+        volver.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent (getApplicationContext(), MainActivity.class);
+                startActivityForResult(intent, 0);
+            }
+        });
 
     }
 }

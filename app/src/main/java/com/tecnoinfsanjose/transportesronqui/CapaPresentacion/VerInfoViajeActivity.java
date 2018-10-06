@@ -5,15 +5,37 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
+import com.tecnoinfsanjose.transportesronqui.CapaLogica.Entities.Viaje;
 import com.tecnoinfsanjose.transportesronqui.R;
 
 public class VerInfoViajeActivity extends AppCompatActivity {
+
+
     Button FinalizarViaje;
+//    Button volver;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ver_info_viaje);
+        Viaje viaje = (Viaje) getIntent().getExtras().get("Viaje");
+
+        EditText etxt1 = (EditText) findViewById(R.id.editText1);
+        EditText etxt2 = (EditText) findViewById(R.id.editText2);
+        EditText etxt3 = (EditText) findViewById(R.id.editText3);
+        EditText etxt4 = (EditText) findViewById(R.id.editText4);
+        EditText etxt5 = (EditText) findViewById(R.id.editText5);
+        EditText etxt6 = (EditText) findViewById(R.id.editText6);
+
+        etxt1.setText(viaje.getOrigen());
+        etxt2.setText(viaje.getDestino());
+        etxt3.setText(viaje.getCarga());
+        etxt4.setText(String.valueOf(viaje.getContacto()));
+        etxt5.setText(String.valueOf(viaje.getContacto()));
+        etxt6.setText(String.valueOf(viaje.getContacto()));
+
         FinalizarViaje = (Button)findViewById(R.id.FinalizarViaje);
         FinalizarViaje.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -22,5 +44,15 @@ public class VerInfoViajeActivity extends AppCompatActivity {
                 startActivityForResult(intent, 0);
             }
         });
+
+//        volver = (Button)findViewById(R.id.volver1);
+//        volver.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent (getApplicationContext(), VerViajeActivity.class);
+//                startActivityForResult(intent, 0);
+//            }
+//        });
+
     }
 }

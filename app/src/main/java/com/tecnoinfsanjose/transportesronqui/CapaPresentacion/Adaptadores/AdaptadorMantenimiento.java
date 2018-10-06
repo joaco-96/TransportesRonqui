@@ -42,7 +42,7 @@ public class AdaptadorMantenimiento extends BaseAdapter {
     public View getView(int i, View view, ViewGroup viewGroup) {
         Viaje item = (Viaje) getItem(i);
 
-        view = LayoutInflater.from(context).inflate(R.layout.list_item_mantenimientos,null);
+        view = LayoutInflater.from(context).inflate(R.layout.list_item_mantenimientos, null);
         ImageView imagen = (ImageView) view.findViewById(R.id.imageViewMant);
         TextView titulo = (TextView) view.findViewById(R.id.TituloItemMant);
         TextView descripcion = (TextView) view.findViewById(R.id.DescripcionItemMant);
