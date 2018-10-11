@@ -27,7 +27,7 @@
         android:drawableLeft="@drawable/ic_action_name"
         android:ems="10"
         android:hint="Usuario"
-        android:inputType="textPersonName" />
+        android:inputType="numberSigned" />
 
     <EditText
         android:id="@+id/TextPassword"

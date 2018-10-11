@@ -1,338 +1,333 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".CapaPresentacion.FotoActivity">
+    android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".CapaPresentacion.FotoActivity">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="115dp"
+            android:layout_marginEnd="115dp"
+            android:text="Finalizar Viaje"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="115dp"
-        android:layout_marginEnd="115dp"
-        android:text="Finalizar Viaje"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <Button
+            android:id="@+id/btnCargarImg1"
+            android:layout_width="87dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/colorPrimaryDark"
+            android:onClick="onclick"
+            android:text="Selecciona Imagen"
+            android:textColor="#ffff"
+            app:layout_constraintEnd_toStartOf="@+id/btnCargarImg2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imagen1" />
 
+        <ImageView
+            android:id="@+id/imagen1"
+            android:layout_width="108dp"
+            android:layout_height="87dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="5dp"
+            android:src="@drawable/img_base"
+            app:layout_constraintBottom_toTopOf="@+id/btnCargarImg1"
+            app:layout_constraintEnd_toStartOf="@+id/imagen2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Observaciones" />
 
-    <Button
-        android:id="@+id/btnCargarImg1"
-        android:layout_width="87dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="16dp"
-        android:background="@color/colorPrimaryDark"
-        android:onClick="onclick"
-        android:text="Selecciona Imagen"
-        android:textColor="#ffff"
-        app:layout_constraintEnd_toStartOf="@+id/btnCargarImg2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imagen1" />
+        <ImageView
+            android:id="@+id/imagen2"
+            android:layout_width="108dp"
+            android:layout_height="87dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="5dp"
+            android:src="@drawable/img_base"
+            app:layout_constraintBottom_toTopOf="@+id/btnCargarImg2"
+            app:layout_constraintEnd_toStartOf="@+id/imagen3"
+            app:layout_constraintStart_toEndOf="@+id/imagen1"
+            app:layout_constraintTop_toBottomOf="@+id/editText10" />
 
-    <ImageView
-        android:id="@+id/imagen1"
-        android:layout_width="108dp"
-        android:layout_height="87dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="5dp"
-        android:src="@drawable/img_base"
-        app:layout_constraintBottom_toTopOf="@+id/btnCargarImg1"
-        app:layout_constraintEnd_toStartOf="@+id/imagen2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Observaciones" />
+        <ImageView
+            android:id="@+id/imagen3"
+            android:layout_width="108dp"
+            android:layout_height="87dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="5dp"
+            android:src="@drawable/img_base"
+            app:layout_constraintBottom_toTopOf="@+id/btnCargarImg3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imagen2"
+            app:layout_constraintTop_toBottomOf="@+id/editText10" />
 
-    <ImageView
-        android:id="@+id/imagen2"
-        android:layout_width="108dp"
-        android:layout_height="87dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="5dp"
-        android:src="@drawable/img_base"
-        app:layout_constraintBottom_toTopOf="@+id/btnCargarImg2"
-        app:layout_constraintEnd_toStartOf="@+id/imagen3"
-        app:layout_constraintStart_toEndOf="@+id/imagen1"
-        app:layout_constraintTop_toBottomOf="@+id/editText10" />
+        <Button
+            android:id="@+id/btnCargarImg2"
+            android:layout_width="87dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="24dp"
+            android:background="@color/colorPrimaryDark"
+            android:onClick="onclick"
+            android:text="Selecciona Imagen"
+            android:textColor="#ffff"
+            app:layout_constraintEnd_toStartOf="@+id/btnCargarImg3"
+            app:layout_constraintStart_toEndOf="@+id/btnCargarImg1"
+            app:layout_constraintTop_toBottomOf="@+id/imagen2" />
 
-    <ImageView
-        android:id="@+id/imagen3"
-        android:layout_width="108dp"
-        android:layout_height="87dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="5dp"
-        android:src="@drawable/img_base"
-        app:layout_constraintBottom_toTopOf="@+id/btnCargarImg3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imagen2"
-        app:layout_constraintTop_toBottomOf="@+id/editText10" />
+        <Button
+            android:id="@+id/btnCargarImg3"
+            android:layout_width="87dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="24dp"
+            android:background="@color/colorPrimaryDark"
+            android:onClick="onclick"
+            android:text="Selecciona Imagen"
+            android:textColor="#ffff"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btnCargarImg2"
+            app:layout_constraintTop_toBottomOf="@+id/imagen3" />
 
-    <Button
-        android:id="@+id/btnCargarImg2"
-        android:layout_width="87dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="24dp"
-        android:background="@color/colorPrimaryDark"
-        android:onClick="onclick"
-        android:text="Selecciona Imagen"
-        android:textColor="#ffff"
-        app:layout_constraintEnd_toStartOf="@+id/btnCargarImg3"
-        app:layout_constraintStart_toEndOf="@+id/btnCargarImg1"
-        app:layout_constraintTop_toBottomOf="@+id/imagen2" />
+        <EditText
+            android:id="@+id/FVFecha"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:ems="10"
+            android:inputType="date"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:textColor="@android:color/background_dark"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-    <Button
-        android:id="@+id/btnCargarImg3"
-        android:layout_width="87dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="24dp"
-        android:background="@color/colorPrimaryDark"
-        android:onClick="onclick"
-        android:text="Selecciona Imagen"
-        android:textColor="#ffff"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnCargarImg2"
-        app:layout_constraintTop_toBottomOf="@+id/imagen3" />
+        <TextView
+            android:id="@+id/FVDestino"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:textColor="@android:color/background_dark"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/FVFecha" />
 
-    <EditText
-        android:id="@+id/FVFecha"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="16dp"
-        android:ems="10"
-        android:inputType="date"
-        android:selectAllOnFocus="true"
-        android:singleLine="true"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/Fecha"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        <EditText
+            android:id="@+id/FVToneladas"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:textColor="@android:color/background_dark"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/FVDestino" />
 
-    <TextView
-        android:id="@+id/FVDestino"
-        android:layout_width="216dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="16dp"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/Destino"
-        app:layout_constraintTop_toBottomOf="@+id/FVFecha" />
+        <EditText
+            android:id="@+id/FVKms"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:ems="10"
+            android:inputType="numberSigned"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:textColor="@android:color/background_dark"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/FVToneladas" />
 
-    <EditText
-        android:id="@+id/FVToneladas"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="16dp"
-        android:ems="10"
-        android:inputType="numberDecimal"
-        android:selectAllOnFocus="true"
-        android:singleLine="true"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/Toneladas"
-        app:layout_constraintTop_toBottomOf="@+id/FVDestino" />
+        <EditText
+            android:id="@+id/FVRemito1"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:ems="10"
+            android:inputType="number"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:textColor="@android:color/background_dark"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/FVKms" />
 
-    <EditText
-        android:id="@+id/FVKms"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="16dp"
-        android:ems="10"
-        android:inputType="numberSigned"
-        android:selectAllOnFocus="true"
-        android:singleLine="true"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/Kms"
-        app:layout_constraintTop_toBottomOf="@+id/FVToneladas" />
+        <EditText
+            android:id="@+id/FVRemito2"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:ems="10"
+            android:inputType="number"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:textColor="@android:color/background_dark"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/FVRemito1" />
 
-    <EditText
-        android:id="@+id/FVRemito1"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="16dp"
-        android:ems="10"
-        android:inputType="number"
-        android:selectAllOnFocus="true"
-        android:singleLine="true"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/Remito1"
-        app:layout_constraintTop_toBottomOf="@+id/FVKms" />
+        <EditText
+            android:id="@+id/editText10"
+            android:layout_width="200dp"
+            android:layout_height="75dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:ems="10"
+            android:inputType="textMultiLine"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:textColor="@android:color/background_dark"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/FVRemito2" />
 
-    <EditText
-        android:id="@+id/FVRemito2"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="16dp"
-        android:ems="10"
-        android:inputType="number"
-        android:selectAllOnFocus="true"
-        android:singleLine="true"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/Remito2"
-        app:layout_constraintTop_toBottomOf="@+id/FVRemito1" />
+        <TextView
+            android:id="@+id/Fecha"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:gravity="fill"
+            android:text="Fecha:"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-    <EditText
-        android:id="@+id/editText10"
-        android:layout_width="214dp"
-        android:layout_height="75dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="16dp"
-        android:ems="10"
-        android:inputType="textMultiLine"
-        android:selectAllOnFocus="true"
-        android:singleLine="true"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/Observaciones"
-        app:layout_constraintTop_toBottomOf="@+id/FVRemito2" />
+        <TextView
+            android:id="@+id/Destino"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:gravity="fill"
+            android:text="Destino:"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Fecha" />
 
-    <TextView
-        android:id="@+id/Fecha"
-        android:layout_width="100dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="16dp"
-        android:gravity="fill"
-        android:text="Fecha:"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toStartOf="@+id/FVFecha"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        <TextView
+            android:id="@+id/Toneladas"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:gravity="fill"
+            android:text="Toneladas:"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Destino" />
 
-    <TextView
-        android:id="@+id/Destino"
-        android:layout_width="100dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="16dp"
-        android:gravity="fill"
-        android:text="Destino:"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toStartOf="@+id/FVDestino"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Fecha" />
+        <TextView
+            android:id="@+id/Kms"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:gravity="fill"
+            android:text="Kms:"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Toneladas" />
 
-    <TextView
-        android:id="@+id/Toneladas"
-        android:layout_width="100dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="16dp"
-        android:gravity="fill"
-        android:text="Toneladas:"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toStartOf="@+id/FVToneladas"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Destino" />
+        <TextView
+            android:id="@+id/Remito1"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:gravity="fill"
+            android:text="Nro. Remito:"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Kms" />
 
-    <TextView
-        android:id="@+id/Kms"
-        android:layout_width="100dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="16dp"
-        android:gravity="fill"
-        android:text="Kms:"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toStartOf="@+id/FVKms"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Toneladas" />
+        <TextView
+            android:id="@+id/Remito2"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:gravity="fill"
+            android:text="Nro. Remito:"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Remito1" />
 
-    <TextView
-        android:id="@+id/Remito1"
-        android:layout_width="100dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="16dp"
-        android:gravity="fill"
-        android:text="Nro. Remito:"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toStartOf="@+id/FVRemito1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Kms" />
+        <TextView
+            android:id="@+id/Observaciones"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:gravity="fill"
+            android:text="Comentario:"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Remito2" />
 
-    <TextView
-        android:id="@+id/Remito2"
-        android:layout_width="100dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="16dp"
-        android:gravity="fill"
-        android:text="Nro. Remito:"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toStartOf="@+id/FVRemito2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Remito1" />
+        <Button
+            android:id="@+id/btnVolver"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/boton_volver"
+            android:text="Cancelar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnCargarImg1" />
 
-    <TextView
-        android:id="@+id/Observaciones"
-        android:layout_width="100dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="16dp"
-        android:gravity="fill"
-        android:text="Comentario:"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toStartOf="@+id/editText10"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Remito2" />
+        <Button
+            android:id="@+id/btnFinalizar"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/boton_redondo"
+            android:text="Confirmar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnCargarImg3" />
 
-    <Button
-        android:id="@+id/btnVolver"
-        android:layout_width="150dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="32dp"
-        android:text="Cancelar"
-        android:background="@drawable/boton_volver"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnFinalizar"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnCargarImg1" />
+    </android.support.constraint.ConstraintLayout>
 
-    <Button
-        android:id="@+id/btnFinalizar"
-        android:layout_width="150dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="24dp"
-        android:text="Confirmar"
-        android:background="@drawable/boton_redondo"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnVolver"
-        app:layout_constraintTop_toBottomOf="@+id/btnCargarImg3" />
-
-</android.support.constraint.ConstraintLayout>
+</ScrollView>
