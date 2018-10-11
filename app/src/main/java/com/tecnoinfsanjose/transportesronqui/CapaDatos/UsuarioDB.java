@@ -14,7 +14,7 @@ public class UsuarioDB {
     public boolean PersistirUsuario(Usuario usu, Context context){
         Usuario user = getUsuario(context);
         if(user==null){
-            ConexionSQliteHelper conn = new ConexionSQliteHelper(context, "bdRonqui", null, 1);
+            ConexionSQliteHelper conn = new ConexionSQliteHelper(context, "bdRonqui", null, 3);
 
             SQLiteDatabase db = conn.getWritableDatabase();
 
@@ -43,7 +43,7 @@ public class UsuarioDB {
         }
     }
     public Usuario getUsuario(Context context){
-        ConexionSQliteHelper conn=new ConexionSQliteHelper(context ,"bdRonqui",null,1);
+        ConexionSQliteHelper conn=new ConexionSQliteHelper(context ,"bdRonqui",null,3);
         SQLiteDatabase dbp=conn.getReadableDatabase();
 
         Cursor cursor=dbp.rawQuery("SELECT "+Utilidades.CAMPO_CI+","+Utilidades.CAMPO_PASSWORD+
@@ -59,7 +59,7 @@ public class UsuarioDB {
 
     }
     public boolean deleteUsuario(int id, Context context){
-        ConexionSQliteHelper conn=new ConexionSQliteHelper(context ,"bdRonqui",null,1);
+        ConexionSQliteHelper conn=new ConexionSQliteHelper(context ,"bdRonqui",null,3);
         SQLiteDatabase db=conn.getWritableDatabase();
         String[] parametros= {String.valueOf(id)};
 
@@ -68,7 +68,7 @@ public class UsuarioDB {
         return true;
     }
     public boolean updateUsuario(Usuario usu, Context context){
-        ConexionSQliteHelper conn=new ConexionSQliteHelper(context ,"bdRonqui",null,1);
+        ConexionSQliteHelper conn=new ConexionSQliteHelper(context ,"bdRonqui",null,3);
         SQLiteDatabase db=conn.getWritableDatabase();
         String[] parametros={String.valueOf(usu.getCi())};
         ContentValues values=new ContentValues();

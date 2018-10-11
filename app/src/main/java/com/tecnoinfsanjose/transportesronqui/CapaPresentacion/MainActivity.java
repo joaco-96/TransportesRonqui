@@ -1,15 +1,22 @@
 package com.tecnoinfsanjose.transportesronqui.CapaPresentacion;
 
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.tecnoinfsanjose.transportesronqui.CapaDatos.ConexionSQliteHelper;
+import com.tecnoinfsanjose.transportesronqui.CapaDatos.DataViajeDB;
 import com.tecnoinfsanjose.transportesronqui.CapaDatos.ViajeDB;
+import com.tecnoinfsanjose.transportesronqui.CapaLogica.Entities.Data_Viaje;
 import com.tecnoinfsanjose.transportesronqui.CapaLogica.Entities.Viaje;
 import com.tecnoinfsanjose.transportesronqui.R;
+
+import java.text.ParseException;
+import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -40,12 +47,15 @@ public class MainActivity extends AppCompatActivity {
         BotonDB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Viaje viaje1 = new Viaje(1,"San Jose","Montevideo","Soja",98848100);
-                Viaje viaje2 = new Viaje(2,"San Jose","Montevideo","Soja",98848100);
-                Viaje viaje3 = new Viaje(3,"San Jose","Montevideo","Soja",98848100);
-                Viaje viaje4 = new Viaje(4,"San Jose","Montevideo","Soja",98848100);
-                Viaje viaje5 = new Viaje(5,"San Jose","Treinta y Tres","Maiz",98848100);
-                Viaje viaje6 = new Viaje(6,"San Jose","Canelones","Trigo",98848100);
+
+                DataViajeDB prueba = new DataViajeDB();
+                Viaje viaje1 = new Viaje(1,"San Jose","Montevideo","Soja","Lucas",98848100,43422063);
+                Viaje viaje2 = new Viaje(2,"San Jose","Montevideo","Soja","Lucas",98848100,43422063);
+                Viaje viaje3 = new Viaje(3,"San Jose","Montevideo","Soja","Lucas",98848100,43422063);
+                Viaje viaje4 = new Viaje(4,"San Jose","Montevideo","Soja","Lucas",98848100,43422063);
+                Viaje viaje5 = new Viaje(5,"San Jose","Montevideo","Soja","Lucas",98848100,43422063);
+                Viaje viaje6 = new Viaje(6,"San Jose","Montevideo","Soja","Lucas",98848100,43422063);
+                Viaje viaje7 = new Viaje(7,"San Jose","Montevideo","Soja","Lucas",98848100,43422063);
                 ViajeDB DBViaje = new ViajeDB();
                 if(
                 DBViaje.PersistirViaje(viaje1, getApplicationContext())&&
@@ -58,8 +68,19 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(),"Datos Cargados Correctamente",Toast.LENGTH_LONG).show();
 
                 }
-
+                Date fecha = new Date();
+                float ton = 123;
+//                prueba.deleteViaje(1,getApplicationContext());
+                Data_Viaje data1 = new Data_Viaje(1,fecha,123,ton,123,2134,"observaciones","ruta1","ruta2","ruta3");
+                if(prueba.PersistirDataViaje(data1,getApplicationContext())){
+                    try {
+                        prueba.getViajes(getApplicationContext());
+                    } catch (ParseException e) {
+                        e.printStackTrace();
+                    }
+                }
             }
         });
     }
+    @Override public void onBackPressed() { moveTaskToBack(true); }
 }

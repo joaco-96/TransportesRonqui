@@ -46,6 +46,7 @@ public class FotoActivity extends AppCompatActivity {
     Button botonCargar2;
     ImageView imagen2;
     Button botonCargar3;
+    Button finalizar ;
     ImageView imagen3;
     String path;
     @Override
@@ -59,6 +60,8 @@ public class FotoActivity extends AppCompatActivity {
         botonCargar2= (Button) findViewById(R.id.btnCargarImg2);
         imagen3= (ImageView) findViewById(R.id.imagen3);
         botonCargar3= (Button) findViewById(R.id.btnCargarImg3);
+        finalizar = (Button) findViewById();
+
 
         if(validaPermisos()){
             botonCargar1.setEnabled(true);
