@@ -10,7 +10,8 @@
         android:id="@+id/ImagenListItem"
         android:layout_width="100dp"
         android:layout_height="70dp"
-        app:srcCompat="@drawable/truck" />
+        android:src="@drawable/image_item"
+        app:srcCompat="@drawable/image_item" />
 
     <LinearLayout
         android:layout_width="match_parent"

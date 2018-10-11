@@ -15,7 +15,7 @@ public class ViajeDB {
 
     public boolean PersistirViaje(Viaje viaje, Context context){
         if(viaje!=null){
-            ConexionSQliteHelper conn = new ConexionSQliteHelper(context, "bdRonqui", null, 1);
+            ConexionSQliteHelper conn = new ConexionSQliteHelper(context, "bdRonqui", null, 3);
 
             SQLiteDatabase db = conn.getWritableDatabase();
 
@@ -25,6 +25,8 @@ public class ViajeDB {
             values.put(Utilidades.VIAJE_DESTINO, viaje.getDestino());
             values.put(Utilidades.VIAJE_CARGA, viaje.getCarga());
             values.put(Utilidades.VIAJE_CONTACTO, viaje.getContacto());
+            values.put(Utilidades.VIAJE_TEL, viaje.getTel());
+            values.put(Utilidades.VIAJE_CENTRAL, viaje.getCentral());
 
             Long idResultante = db.insert(Utilidades.TABLA_VIAJES, Utilidades.VIAJE_ID, values);
             db.close();
@@ -41,14 +43,14 @@ public class ViajeDB {
     }
     public List<Viaje> getViajes(Context context){
         List<Viaje> viajes = new ArrayList<Viaje>();
-        ConexionSQliteHelper conn=new ConexionSQliteHelper(context ,"bdRonqui",null,1);
+        ConexionSQliteHelper conn=new ConexionSQliteHelper(context ,"bdRonqui",null,3);
         SQLiteDatabase dbp=conn.getReadableDatabase();
 
         Cursor cursor=dbp.rawQuery("SELECT "+Utilidades.VIAJE_ID+","+Utilidades.VIAJE_ORIGEN+","+Utilidades.VIAJE_DESTINO+","+Utilidades.VIAJE_CARGA+","+Utilidades.VIAJE_CONTACTO+
-                " FROM "+Utilidades.TABLA_VIAJES,null);
+                ","+Utilidades.VIAJE_TEL+","+Utilidades.VIAJE_CENTRAL+" FROM "+Utilidades.TABLA_VIAJES,null);
 
         while (cursor.moveToNext()){
-            Viaje nuevo = new Viaje(Integer.valueOf(cursor.getString(0)),cursor.getString(1),cursor.getString(2),cursor.getString(3),Integer.valueOf(cursor.getString(4)));
+            Viaje nuevo = new Viaje(Integer.valueOf(cursor.getString(0)),cursor.getString(1),cursor.getString(2),cursor.getString(3),cursor.getString(4),Long.valueOf(cursor.getString(5)),Long.valueOf(cursor.getString(6)));
             viajes.add(nuevo);
         }
         cursor.close();
@@ -57,7 +59,7 @@ public class ViajeDB {
 
     }
     public boolean deleteViaje(int id, Context context){
-        ConexionSQliteHelper conn=new ConexionSQliteHelper(context ,"bdRonqui",null,1);
+        ConexionSQliteHelper conn=new ConexionSQliteHelper(context ,"bdRonqui",null,3);
         SQLiteDatabase db=conn.getWritableDatabase();
         String[] parametros= {String.valueOf(id)};
 
@@ -66,7 +68,7 @@ public class ViajeDB {
         return true;
     }
     public boolean updateViaje(Viaje viaje, Context context){
-        ConexionSQliteHelper conn=new ConexionSQliteHelper(context ,"bdRonqui",null,1);
+        ConexionSQliteHelper conn=new ConexionSQliteHelper(context ,"bdRonqui",null,3);
         SQLiteDatabase db=conn.getWritableDatabase();
         String[] parametros={String.valueOf(viaje.getId())};
         ContentValues values=new ContentValues();
@@ -74,6 +76,8 @@ public class ViajeDB {
         values.put(Utilidades.VIAJE_DESTINO,viaje.getDestino());
         values.put(Utilidades.VIAJE_CARGA,viaje.getCarga());
         values.put(Utilidades.VIAJE_CONTACTO,viaje.getContacto());
+        values.put(Utilidades.VIAJE_TEL,viaje.getTel());
+        values.put(Utilidades.VIAJE_CENTRAL,viaje.getCentral());
         db.update(Utilidades.TABLA_VIAJES,values,Utilidades.VIAJE_ID+"=?",parametros);
         db.close();
         return true;
