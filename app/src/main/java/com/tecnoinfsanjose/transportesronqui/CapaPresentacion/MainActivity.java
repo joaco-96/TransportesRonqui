@@ -63,8 +63,7 @@ public class MainActivity extends AppCompatActivity {
                 DBViaje.PersistirViaje(viaje3, getApplicationContext())&&
                 DBViaje.PersistirViaje(viaje4, getApplicationContext())&&
                 DBViaje.PersistirViaje(viaje5, getApplicationContext())&&
-                DBViaje.PersistirViaje(viaje6, getApplicationContext())&&
-                DBViaje.PersistirViaje(viaje7, getApplicationContext()))
+                DBViaje.PersistirViaje(viaje6, getApplicationContext()))
                 {
                     Toast.makeText(getApplicationContext(),"Datos Cargados Correctamente",Toast.LENGTH_LONG).show();
 

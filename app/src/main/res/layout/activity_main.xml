@@ -15,6 +15,7 @@
         android:layout_marginBottom="52dp"
         android:layout_marginTop="17dp"
         android:text="Ver Viaje"
+        android:background = "@drawable/boton_redondo"
         app:layout_constraintBottom_toTopOf="@+id/button2"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -27,6 +28,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="136dp"
         android:text="Mantenimiento"
+        android:background = "@drawable/boton_redondo"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
@@ -50,6 +52,7 @@
         android:layout_marginStart="148dp"
         android:layout_marginTop="44dp"
         android:text="Cargar DB"
+        android:background="@drawable/boton_volver"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

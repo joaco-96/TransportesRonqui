@@ -28,6 +28,7 @@
         android:layout_marginEnd="123dp"
         android:layout_marginBottom="50dp"
         android:text="Volver"
+        android:background = "@drawable/boton_volver"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -54,6 +55,7 @@
         android:layout_marginTop="60dp"
         android:layout_marginEnd="42dp"
         android:text="Ver Mantenimientos"
+        android:background = "@drawable/boton_redondo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
@@ -66,6 +68,7 @@
         android:layout_marginTop="60dp"
         android:layout_marginEnd="42dp"
         android:text="Ver Mantenimientos"
+        android:background = "@drawable/boton_redondo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />

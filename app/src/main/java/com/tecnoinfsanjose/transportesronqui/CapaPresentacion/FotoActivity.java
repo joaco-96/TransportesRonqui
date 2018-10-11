@@ -40,6 +40,7 @@ public class FotoActivity extends AppCompatActivity {
     final int COD_SELECCIONA=10;
     final int COD_FOTO=20;
 
+//    Button cancelar;
     Button botonCargar1;
     ImageView imagen1;
     Button botonCargar2;
@@ -71,6 +72,16 @@ public class FotoActivity extends AppCompatActivity {
             botonCargar2.setEnabled(false);
             botonCargar3.setEnabled(false);
         }
+
+//        cancelar = (Button)findViewById(R.id.btnVolver);
+//        cancelar.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent (getApplicationContext(), VerInfoViajeActivity.class);
+//                startActivityForResult(intent, 0);
+//            }
+//        });
+
 
     }
 
