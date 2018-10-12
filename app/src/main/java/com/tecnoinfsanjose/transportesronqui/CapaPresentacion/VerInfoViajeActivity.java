@@ -20,7 +20,7 @@ public class VerInfoViajeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ver_info_viaje);
-        Viaje viaje = (Viaje) getIntent().getExtras().get("Viaje");
+        final Viaje viaje = (Viaje) getIntent().getExtras().get("Viaje");
 
         EditText etxt1 = (EditText) findViewById(R.id.editText1);
         EditText etxt2 = (EditText) findViewById(R.id.editText2);
@@ -41,6 +41,7 @@ public class VerInfoViajeActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent (getApplicationContext(), FotoActivity.class);
+                intent.putExtra("Viaje", viaje);
                 startActivityForResult(intent, 0);
             }
         });

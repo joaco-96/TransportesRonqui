@@ -28,6 +28,10 @@ public class Data_Viaje {
         Imagen3 = imagen3;
     }
 
+    public Data_Viaje() {
+
+    }
+
     public int getId() {
         return Id;
     }
