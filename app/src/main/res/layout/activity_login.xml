@@ -26,7 +26,7 @@
         android:background="#11000000"
         android:drawableLeft="@drawable/ic_action_name"
         android:ems="10"
-        android:hint="Usuario"
+        android:hint="CI Usuario"
         android:inputType="numberSigned" />
 
     <EditText

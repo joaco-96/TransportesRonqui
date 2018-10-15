@@ -60,7 +60,7 @@ public class FotoActivity extends AppCompatActivity {
         botonCargar2= (Button) findViewById(R.id.btnCargarImg2);
         imagen3= (ImageView) findViewById(R.id.imagen3);
         botonCargar3= (Button) findViewById(R.id.btnCargarImg3);
-        finalizar = (Button) findViewById();
+        finalizar = (Button) findViewById(R.id.btnFinalizar);
 
 
         if(validaPermisos()){

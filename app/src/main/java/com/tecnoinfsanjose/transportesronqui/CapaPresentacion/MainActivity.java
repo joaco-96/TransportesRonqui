@@ -51,19 +51,15 @@ public class MainActivity extends AppCompatActivity {
                 DataViajeDB prueba = new DataViajeDB();
                 Viaje viaje1 = new Viaje(1,"San Jose","Montevideo","Soja","Lucas",98848100,43422063);
                 Viaje viaje2 = new Viaje(2,"San Jose","Montevideo","Soja","Lucas",98848100,43422063);
-                Viaje viaje3 = new Viaje(3,"San Jose","Montevideo","Soja","Lucas",98848100,43422063);
-                Viaje viaje4 = new Viaje(4,"San Jose","Montevideo","Soja","Lucas",98848100,43422063);
-                Viaje viaje5 = new Viaje(5,"San Jose","Montevideo","Soja","Lucas",98848100,43422063);
-                Viaje viaje6 = new Viaje(6,"San Jose","Montevideo","Soja","Lucas",98848100,43422063);
-                Viaje viaje7 = new Viaje(7,"San Jose","Montevideo","Soja","Lucas",98848100,43422063);
+                Viaje viaje3 = new Viaje(3,"San Jose","San Jose","Trigo","Carlos",98848100,43422063);
+                Viaje viaje4 = new Viaje(4,"San Jose","Rocha","Maiz","Pepe",98848100,43422063);
+                Viaje viaje7 = new Viaje(7,"San Jose","Canelones","Soja","Jose",98848100,43422063);
                 ViajeDB DBViaje = new ViajeDB();
-                if(
-                DBViaje.PersistirViaje(viaje1, getApplicationContext())&&
-                DBViaje.PersistirViaje(viaje2, getApplicationContext())&&
-                DBViaje.PersistirViaje(viaje3, getApplicationContext())&&
-                DBViaje.PersistirViaje(viaje4, getApplicationContext())&&
-                DBViaje.PersistirViaje(viaje5, getApplicationContext())&&
-                DBViaje.PersistirViaje(viaje6, getApplicationContext()))
+                if(DBViaje.PersistirViaje(viaje1, getApplicationContext())&&
+                        DBViaje.PersistirViaje(viaje2, getApplicationContext())&&
+                        DBViaje.PersistirViaje(viaje3, getApplicationContext())&&
+                        DBViaje.PersistirViaje(viaje4, getApplicationContext())&&
+                        DBViaje.PersistirViaje(viaje7, getApplicationContext()))
                 {
                     Toast.makeText(getApplicationContext(),"Datos Cargados Correctamente",Toast.LENGTH_LONG).show();
 
