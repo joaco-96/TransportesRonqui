@@ -61,7 +61,6 @@ public class DataViajeDB {
         while (cursor.moveToNext()){
             Data_Viaje nuevo = new Data_Viaje(Integer.valueOf(cursor.getString(0)),formatter.parse(cursor.getString(1)),Integer.valueOf(cursor.getString(2)),Float.valueOf(cursor.getString(3)),Integer.valueOf(cursor.getString(4)),Integer.valueOf(cursor.getString(5)),cursor.getString(6),cursor.getString(7),cursor.getString(8),cursor.getString(9));
             viajes.add(nuevo);
-            // CORREGIR LA TRAIDA DEL DATE  DE LA BASE TRANSFORMAR EL STRING EN UN DATE
             System.out.println(nuevo.getFecha().toString());
             System.out.println(cursor.getString(1));
         }
@@ -82,9 +81,10 @@ public class DataViajeDB {
     public boolean updateViaje(Data_Viaje viaje, Context context){
         ConexionSQliteHelper conn=new ConexionSQliteHelper(context ,"bdRonqui",null,3);
         SQLiteDatabase db=conn.getWritableDatabase();
+        SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy");
         String[] parametros={String.valueOf(viaje.getId())};
         ContentValues values=new ContentValues();
-        values.put(Utilidades.DATA_FECHA, String.valueOf(viaje.getFecha()));
+        values.put(Utilidades.DATA_FECHA, formatter.format(viaje.getFecha()));
         values.put(Utilidades.DATA_KM, viaje.getKm());
         values.put(Utilidades.DATA_TONELADAS, viaje.getToneladas());
         values.put(Utilidades.DATA_NRO_REMITO1, viaje.getNro_Remito1());

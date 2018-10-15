@@ -49,6 +49,7 @@ public class VerInfoViajeActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent (getApplicationContext(), FotoActivity.class);
+                intent.putExtra("Viaje", viaje);
                 startActivityForResult(intent, 0);
             }
         });

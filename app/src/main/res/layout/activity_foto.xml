@@ -69,7 +69,7 @@
             app:layout_constraintBottom_toTopOf="@+id/btnCargarImg2"
             app:layout_constraintEnd_toStartOf="@+id/imagen3"
             app:layout_constraintStart_toEndOf="@+id/imagen1"
-            app:layout_constraintTop_toBottomOf="@+id/editText10" />
+            app:layout_constraintTop_toBottomOf="@+id/FVObservaciones" />
 
         <ImageView
             android:id="@+id/imagen3"
@@ -83,7 +83,7 @@
             app:layout_constraintBottom_toTopOf="@+id/btnCargarImg3"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/imagen2"
-            app:layout_constraintTop_toBottomOf="@+id/editText10" />
+            app:layout_constraintTop_toBottomOf="@+id/FVObservaciones" />
 
         <Button
             android:id="@+id/btnCargarImg2"
@@ -119,14 +119,13 @@
             android:id="@+id/FVFecha"
             android:layout_width="200dp"
             android:layout_height="40dp"
-            android:layout_marginTop="8dp"
             android:layout_marginEnd="16dp"
+            android:layout_marginTop="8dp"
             android:ems="10"
-            android:inputType="date"
+            android:inputType="phone"
             android:selectAllOnFocus="true"
             android:singleLine="true"
             android:textColor="@android:color/background_dark"
-            android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView" />
@@ -204,7 +203,7 @@
             app:layout_constraintTop_toBottomOf="@+id/FVRemito1" />
 
         <EditText
-            android:id="@+id/editText10"
+            android:id="@+id/FVObservaciones"
             android:layout_width="200dp"
             android:layout_height="75dp"
             android:layout_marginTop="8dp"
@@ -222,7 +221,7 @@
             android:id="@+id/Fecha"
             android:layout_width="100dp"
             android:layout_height="40dp"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:gravity="fill"
             android:text="Fecha:"
@@ -234,7 +233,7 @@
             android:id="@+id/Destino"
             android:layout_width="100dp"
             android:layout_height="40dp"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:gravity="fill"
             android:text="Destino:"
@@ -258,7 +257,7 @@
             android:id="@+id/Kms"
             android:layout_width="100dp"
             android:layout_height="40dp"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:gravity="fill"
             android:text="Kms:"
