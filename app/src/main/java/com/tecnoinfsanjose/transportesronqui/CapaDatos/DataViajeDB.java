@@ -69,6 +69,7 @@ public class DataViajeDB {
 
 
     }
+
     public boolean deleteViaje(int id, Context context){
         ConexionSQliteHelper conn=new ConexionSQliteHelper(context ,"bdRonqui",null,3);
         SQLiteDatabase db=conn.getWritableDatabase();
