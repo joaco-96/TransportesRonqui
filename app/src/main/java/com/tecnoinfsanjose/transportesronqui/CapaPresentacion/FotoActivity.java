@@ -1,5 +1,7 @@
 package com.tecnoinfsanjose.transportesronqui.CapaPresentacion;
 
+import android.app.DatePickerDialog;
+import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -17,9 +19,11 @@ import android.support.v4.content.FileProvider;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.InputType;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -34,6 +38,7 @@ import com.tecnoinfsanjose.transportesronqui.R;
 import java.io.File;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 
 import static android.Manifest.permission.CAMERA;
 import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
@@ -44,6 +49,10 @@ public class FotoActivity extends AppCompatActivity {
 
     private final String CARPETA_RAIZ="MisImagenes/";
     private final String RUTA_IMAGEN=CARPETA_RAIZ+"MisFotos";
+
+    private int mYearIni, mMonthIni, mDayIni, sYearIni, sMonthIni, sDayIni;
+    static final int DATE_ID = 0;
+    Calendar C = Calendar.getInstance();
 
     final int COD_SELECCIONA=10;
     final int COD_FOTO=20;
@@ -75,6 +84,10 @@ public class FotoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         final Viaje viaje = (Viaje) getIntent().getExtras().get("Viaje");
         setContentView(R.layout.activity_foto);
+        //No abre teclado de entrada
+        FVFecha.setInputType(InputType.TYPE_NULL);
+
+        FVFecha = (EditText) findViewById(R.id.FVFecha);
         data = new Data_Viaje();
         imagen1= (ImageView) findViewById(R.id.imagen1);
         botonCargar1= (Button) findViewById(R.id.btnCargarImg1);
@@ -83,7 +96,6 @@ public class FotoActivity extends AppCompatActivity {
         imagen3= (ImageView) findViewById(R.id.imagen3);
         botonCargar3= (Button) findViewById(R.id.btnCargarImg3);
         finalizar = (Button) findViewById(R.id.btnFinalizar);
-        FVFecha = (EditText) findViewById(R.id.FVFecha);
         FVDestino = (TextView) findViewById(R.id.FVDestino);
         FVToneladas = (EditText) findViewById(R.id.FVToneladas);
         FVKm = (EditText) findViewById(R.id.FVKms);
@@ -91,6 +103,19 @@ public class FotoActivity extends AppCompatActivity {
         FVRemito2 = (EditText) findViewById(R.id.FVRemito2);
         FVObservaciones= (EditText) findViewById(R.id.FVObservaciones);
         FVDestino.setText(viaje.getDestino());
+
+        //Calendario
+        sMonthIni = C.get(Calendar.MONTH);
+        sDayIni = C.get(Calendar.DAY_OF_MONTH);
+        sYearIni = C.get(Calendar.YEAR);
+        FVFecha = (EditText) findViewById(R.id.FVFecha);
+
+        FVFecha.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showDialog(DATE_ID);
+            }
+        });
 
 
         if(validaPermisos()){
@@ -425,5 +450,29 @@ public class FotoActivity extends AppCompatActivity {
 
 
         }
+    }
+
+    //Calendario
+    private void colocar_fecha() {
+        FVFecha.setText((mMonthIni + 1) + "/" + mDayIni + "/" + mYearIni+" ");
+    }
+
+    private DatePickerDialog.OnDateSetListener mDateSetListener =
+            new DatePickerDialog.OnDateSetListener() {
+                public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
+                    mYearIni = year;
+                    mMonthIni = monthOfYear;
+                    mDayIni = dayOfMonth;
+                    colocar_fecha();
+                }
+            };
+
+    @Override
+    protected Dialog onCreateDialog(int id) {
+        switch (id) {
+            case DATE_ID:
+                return new DatePickerDialog(this, mDateSetListener, sYearIni, sMonthIni, sDayIni);
+        }
+        return null;
     }
 }

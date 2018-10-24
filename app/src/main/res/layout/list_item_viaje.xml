@@ -19,7 +19,7 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/TituloItem"
+            android:id="@+id/fechaItem"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@android:color/background_dark"
@@ -27,10 +27,19 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/DescripcionItem"
+            android:id="@+id/origenItem"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@android:color/background_dark" />
+            android:textColor="@android:color/background_dark"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/cargaItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/background_dark"
+            android:textSize="15dp" />
 
     </LinearLayout>
 

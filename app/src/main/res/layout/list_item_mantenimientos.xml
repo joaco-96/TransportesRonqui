@@ -10,7 +10,7 @@
         android:id="@+id/imageViewMant"
         android:layout_width="44dp"
         android:layout_height="31dp"
-        android:src="@drawable/verde" />
+        android:src="@drawable/bamarillo" />
 
     <LinearLayout
         android:layout_width="322dp"
@@ -30,7 +30,9 @@
             android:id="@+id/DescripcionItemMant"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@android:color/background_dark" />
+            android:textColor="@android:color/background_dark"
+            android:textSize="20dp"
+            android:textStyle="bold" />
 
     </LinearLayout>
 
