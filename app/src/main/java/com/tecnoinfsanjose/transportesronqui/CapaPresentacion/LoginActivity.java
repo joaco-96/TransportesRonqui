@@ -11,10 +11,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.tecnoinfsanjose.transportesronqui.CapaLogica.Controllers.UsuarioControlador;
-import com.tecnoinfsanjose.transportesronqui.CapaLogica.Entities.Usuario;
 import com.tecnoinfsanjose.transportesronqui.R;
-
-import org.w3c.dom.Text;
 
 import static android.app.PendingIntent.getActivity;
 

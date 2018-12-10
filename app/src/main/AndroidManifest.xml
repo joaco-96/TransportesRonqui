@@ -6,15 +6,15 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
         android:resizeable="true"
         android:smallScreens="true"
-        android:largeScreens="true"
-        android:xlargeScreens="true"
-        android:normalScreens="true"
-        android:anyDensity="true"/>
+        android:xlargeScreens="true" />
 
     <application
         android:allowBackup="true"
@@ -23,13 +23,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".CapaPresentacion.MainActivity" />
+
+        <activity android:name=".CapaPresentacion.MainActivity"
+        android:label=""
+        android:theme="@style/ThemeMain" />
+
         <activity android:name=".CapaPresentacion.VerInfoViajeActivity" />
         <activity android:name=".CapaPresentacion.MantenimientoActivity" />
         <activity android:name=".CapaPresentacion.VerViajeActivity" />
-        <activity android:name=".CapaPresentacion.FinalizarViaje"/>
-        <activity
-            android:name=".CapaPresentacion.SplashScreen">
+        <activity android:name=".CapaPresentacion.FinalizarViaje" />
+        <activity android:name=".CapaPresentacion.SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -38,9 +41,10 @@
         </activity>
         <activity android:name=".CapaPresentacion.LoginActivity" />
         <activity android:name=".CapaPresentacion.MantenimientoLista" />
-        <activity android:name=".CapaPresentacion.FotoActivity"/>
-        <activity android:name=".CapaPresentacion.FinalizarViaje"
-            tools:ignore="DuplicateActivity"></activity>
+        <activity android:name=".CapaPresentacion.FotoActivity" />
+        <activity
+            android:name=".CapaPresentacion.FinalizarViaje"
+            tools:ignore="DuplicateActivity" />
 
         <provider
             android:name="android.support.v4.content.FileProvider"
@@ -49,8 +53,9 @@
             android:grantUriPermissions="true">
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/provider_paths"/>
+                android:resource="@xml/provider_paths" />
         </provider>
+
     </application>
 
 </manifest>

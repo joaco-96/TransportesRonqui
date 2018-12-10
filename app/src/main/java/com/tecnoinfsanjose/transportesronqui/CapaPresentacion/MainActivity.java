@@ -1,14 +1,16 @@
 package com.tecnoinfsanjose.transportesronqui.CapaPresentacion;
 
 import android.content.Intent;
-import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
+import android.support.v7.widget.Toolbar;
 
-import com.tecnoinfsanjose.transportesronqui.CapaDatos.ConexionSQliteHelper;
 import com.tecnoinfsanjose.transportesronqui.CapaDatos.DataViajeDB;
 import com.tecnoinfsanjose.transportesronqui.CapaDatos.ViajeDB;
 import com.tecnoinfsanjose.transportesronqui.CapaLogica.Entities.Data_Viaje;
@@ -24,6 +26,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        toolbar.setTitleTextColor(Color.parseColor("#000000"));
+
 
         Button btn = (Button) findViewById(R.id.button);
         btn.setOnClickListener(new View.OnClickListener() {
@@ -34,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
         Button btn2 = (Button) findViewById(R.id.button2);
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivityForResult(intent2, 0);
             }
         });
+
 
         Button BotonDB = (Button) findViewById(R.id.BotonDB);
         BotonDB.setOnClickListener(new View.OnClickListener() {
@@ -66,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 Date fecha = new Date();
                 float ton = 123;
-//                prueba.deleteViaje(1,getApplicationContext());
+//                MainActivity.deleteViaje(1,getApplicationContext());
                 Data_Viaje data1 = new Data_Viaje(1,fecha,123,ton,123,2134,"observaciones","ruta1","ruta2","ruta3");
                 if(prueba.PersistirDataViaje(data1,getApplicationContext())){
                     try {
@@ -79,4 +87,13 @@ public class MainActivity extends AppCompatActivity {
         });
     }
     @Override public void onBackPressed() { moveTaskToBack(true); }
+
+    //Menu
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu items for use in the action bar
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_main, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
 }
