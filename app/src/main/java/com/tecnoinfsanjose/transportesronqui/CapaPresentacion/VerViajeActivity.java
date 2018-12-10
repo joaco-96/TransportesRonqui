@@ -1,18 +1,17 @@
 package com.tecnoinfsanjose.transportesronqui.CapaPresentacion;
 
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.ListView;
 
 import com.tecnoinfsanjose.transportesronqui.CapaLogica.Controllers.ViajeControlador;
 import com.tecnoinfsanjose.transportesronqui.CapaLogica.Entities.Viaje;
 import com.tecnoinfsanjose.transportesronqui.CapaPresentacion.Adaptadores.AdaptadorViaje;
-import com.tecnoinfsanjose.transportesronqui.CapaPresentacion.Adaptadores.ItemListViaje;
 import com.tecnoinfsanjose.transportesronqui.R;
 
 import java.util.ArrayList;
@@ -45,6 +44,7 @@ public class VerViajeActivity extends AppCompatActivity {
                 }
             });
 
+
         } else {
 
         }
@@ -55,6 +55,10 @@ public class VerViajeActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent (getApplicationContext(), MainActivity.class);
                 startActivityForResult(intent, 0);
+                AlertDialog.Builder builder = new AlertDialog.Builder(view.getContext());
+
+                builder.setTitle("Confirmar");
+                builder.setMessage("Estas seguro?");
             }
         });
 
