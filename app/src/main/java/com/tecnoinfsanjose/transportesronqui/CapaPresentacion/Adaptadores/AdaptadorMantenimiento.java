@@ -45,19 +45,32 @@ public class AdaptadorMantenimiento extends BaseAdapter {
         view = LayoutInflater.from(context).inflate(R.layout.list_item_mantenimientos, null);
         ImageView imagen = (ImageView) view.findViewById(R.id.imageViewMant);
         TextView titulo = (TextView) view.findViewById(R.id.TituloItemMant);
-        TextView descripcion = (TextView) view.findViewById(R.id.DescripcionItemMant);
+        TextView kms = (TextView) view.findViewById(R.id.DescripcionItemMant);
 
-        titulo.setText("Destino: "+item.getDestino());
-        descripcion.setText("Tipo Carga: "+item.getCarga());
+//        if (item.getTipoMant == "F"){
+            titulo.setText("Mantenimiento: "+item.getDestino());
+            kms.setText("Kilometros: "+item.getCarga());
 
-        switch (item.getCarga()) {
-            case "Trigo":   imagen.setImageResource(R.drawable.amarillo);
-                break;
-            case "Soja":   imagen.setImageResource(R.drawable.verde);
-                break;
-            case "Maiz":   imagen.setImageResource(R.drawable.rojo);
-                break;
-        }
+            switch (item.getCarga()) {
+                case "Trigo":   imagen.setImageResource(R.drawable.brojo);
+                    break;
+                case "Soja":   imagen.setImageResource(R.drawable.bamarillo);
+                    break;
+                case "Maiz":   imagen.setImageResource(R.drawable.brojo);
+                    break;
+            }
+//        }
+//        else if (item.getTipoMant == "K"){
+//            titulo.setText("Mantenimiento: "+item.getDestino());
+//            descripcion.setText("Kilometros: "+item.getCarga());
+//
+//            switch (item.getKilometros()) {
+//                case item.getKilometros >= 0 :   imagen.setImageResource(R.drawable.bamarillo);
+//                    break;
+//                case item.getKilometros < 0 :   imagen.setImageResource(R.drawable.brojo);
+//                    break;
+//            }
+//        }
 
         return view;
 

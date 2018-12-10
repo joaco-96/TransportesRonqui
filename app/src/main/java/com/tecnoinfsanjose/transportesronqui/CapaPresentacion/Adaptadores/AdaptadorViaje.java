@@ -44,11 +44,14 @@ public class AdaptadorViaje extends BaseAdapter {
 
         view = LayoutInflater.from(context).inflate(R.layout.list_item_viaje,null);
         ImageView image = (ImageView) view.findViewById(R.id.ImagenListItem);
-        TextView titulo = (TextView) view.findViewById(R.id.TituloItem);
-        TextView descripcion = (TextView) view.findViewById(R.id.DescripcionItem);
+        TextView fecha = (TextView) view.findViewById(R.id.fechaItem);
+        TextView origendestino = (TextView) view.findViewById(R.id.origenItem);
+        TextView carga = (TextView) view.findViewById(R.id.cargaItem);
 
-        titulo.setText("Destino: "+item.getDestino());
-        descripcion.setText("Tipo Carga: "+item.getCarga());
+
+        fecha.setText("Fecha: "+item.getId());
+        origendestino.setText("Origen: "+item.getOrigen() + " / Destino: " + item.getDestino());
+        carga.setText("Tipo de Carga: "+item.getCarga());
         return view;
     }
 }

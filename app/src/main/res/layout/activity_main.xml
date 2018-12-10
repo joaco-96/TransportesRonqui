@@ -47,16 +47,26 @@
         android:id="@+id/BotonDB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="44dp"
-        android:layout_marginEnd="148dp"
         android:layout_marginStart="148dp"
-        android:layout_marginTop="44dp"
-        android:text="Cargar DB"
+        android:layout_marginEnd="148dp"
+        android:layout_marginBottom="44dp"
         android:background="@drawable/boton_volver"
+        android:text="Cargar DB"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatingActionButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:clickable="true"
+        app:backgroundTint="#7c7b7b"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/seting" />
 
 
 </android.support.constraint.ConstraintLayout>
