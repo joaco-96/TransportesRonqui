@@ -145,7 +145,7 @@ public class FotoActivity extends AppCompatActivity {
                         !FVRemito1.getText().toString().equals("")&&
                         !FVRemito2.getText().toString().equals("")&&
                         !FVToneladas.getText().toString().equals("")){
-                    SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy");
+                    SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyy");
                     try {
                         data.setFecha(formatter.parse(FVFecha.getText().toString()));
                     } catch (ParseException e) {
@@ -165,7 +165,7 @@ public class FotoActivity extends AppCompatActivity {
                         delete.deleteViaje(viaje.getId(),getApplicationContext());
                         Toast.makeText(getApplicationContext(),"Viaje Finalizado Correctamente",Toast.LENGTH_LONG).show();
                     }else{
-                        Toast.makeText(getApplicationContext(),"Error al grabar, llame a Soporte",Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(),"Error al grabar, Contactese con Soporte",Toast.LENGTH_LONG).show();
                     }
 
                 }
@@ -375,6 +375,7 @@ public class FotoActivity extends AppCompatActivity {
         ////
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.FROYO)
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);

@@ -1,6 +1,7 @@
 package com.tecnoinfsanjose.transportesronqui.CapaLogica.Controllers;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 
 import com.tecnoinfsanjose.transportesronqui.CapaDatos.UsuarioDB;
 import com.tecnoinfsanjose.transportesronqui.CapaLogica.Entities.Usuario;
@@ -29,5 +30,19 @@ public class UsuarioControlador {
         }else{
             return "";
         }
+    }
+
+    public boolean logout(int ci,Context context){
+        UsuarioDB db = new UsuarioDB();
+        if(db.deleteUsuario(ci, context)){
+            SharedPreferences sharedPref = context.getSharedPreferences("USER_DATA",Context.MODE_PRIVATE);
+            SharedPreferences.Editor editor = sharedPref.edit();
+            editor.clear();
+            editor.commit();
+            return true;
+        }else{
+            return false;
+        }
+
     }
 }

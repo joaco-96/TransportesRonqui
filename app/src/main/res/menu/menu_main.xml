@@ -5,7 +5,7 @@
     tools:context=".CapaPresentacion.MainActivity">
 
     <item
-        android:id="@+id/dos"
+        android:id="@+id/logout"
         android:orderInCategory="100"
         android:title="@string/logout"
         app:showAsAction="never" />
