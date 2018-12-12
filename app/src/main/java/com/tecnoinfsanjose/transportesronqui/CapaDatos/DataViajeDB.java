@@ -79,6 +79,15 @@ public class DataViajeDB {
         db.close();
         return true;
     }
+
+    public boolean deleteAllDataViaje( Context context){
+        ConexionSQliteHelper conn=new ConexionSQliteHelper(context ,"bdRonqui",null,3);
+        SQLiteDatabase db=conn.getWritableDatabase();
+
+        db.execSQL("delete from "+ Utilidades.TABLA_DATA_VIAJE);
+        db.close();
+        return true;
+    }
     public boolean updateViaje(Data_Viaje viaje, Context context){
         ConexionSQliteHelper conn=new ConexionSQliteHelper(context ,"bdRonqui",null,3);
         SQLiteDatabase db=conn.getWritableDatabase();

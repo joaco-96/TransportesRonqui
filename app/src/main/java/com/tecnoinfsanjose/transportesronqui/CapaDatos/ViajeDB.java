@@ -63,7 +63,16 @@ public class ViajeDB {
         SQLiteDatabase db=conn.getWritableDatabase();
         String[] parametros= {String.valueOf(id)};
 
-        db.delete(Utilidades.TABLA_VIAJES,Utilidades.VIAJE_ID+"=?",parametros);
+        db.delete(Utilidades.TABLA_DATA_VIAJE,Utilidades.DATA_ID+"=?",parametros);
+        db.close();
+        return true;
+    }
+
+    public boolean deleteAllViaje( Context context){
+        ConexionSQliteHelper conn=new ConexionSQliteHelper(context ,"bdRonqui",null,3);
+        SQLiteDatabase db=conn.getWritableDatabase();
+
+        db.execSQL("delete from "+ Utilidades.TABLA_VIAJES);
         db.close();
         return true;
     }

@@ -16,11 +16,13 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.Toast;
 import android.support.v7.widget.Toolbar;
 
 import com.tecnoinfsanjose.transportesronqui.CapaDatos.DataViajeDB;
 import com.tecnoinfsanjose.transportesronqui.CapaDatos.ViajeDB;
+import com.tecnoinfsanjose.transportesronqui.CapaLogica.Controllers.SincronizacionDatos;
 import com.tecnoinfsanjose.transportesronqui.CapaLogica.Controllers.UsuarioControlador;
 import com.tecnoinfsanjose.transportesronqui.CapaLogica.Entities.Data_Viaje;
 import com.tecnoinfsanjose.transportesronqui.CapaLogica.Entities.Viaje;
@@ -54,6 +56,19 @@ public class MainActivity extends AppCompatActivity {
         }
 
 
+        ImageButton Sinc = (ImageButton) findViewById(R.id.SincButton);
+        try {
+            Sinc.setEnabled(SincronizacionDatos.isSincroniced(getApplicationContext()));
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        Sinc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SincronizacionDatos.Sincroniced(getApplicationContext());
+            }
+        });
+
         Button btn = (Button) findViewById(R.id.button);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,7 +77,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivityForResult(intent, 0);
             }
         });
-
 
         Button btn2 = (Button) findViewById(R.id.button2);
         btn2.setOnClickListener(new View.OnClickListener() {
