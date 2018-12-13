@@ -69,12 +69,22 @@ public class DataViajeDB {
 
 
     }
+
     public boolean deleteViaje(int id, Context context){
         ConexionSQliteHelper conn=new ConexionSQliteHelper(context ,"bdRonqui",null,3);
         SQLiteDatabase db=conn.getWritableDatabase();
         String[] parametros= {String.valueOf(id)};
 
         db.delete(Utilidades.TABLA_DATA_VIAJE,Utilidades.DATA_ID+"=?",parametros);
+        db.close();
+        return true;
+    }
+
+    public boolean deleteAllDataViaje( Context context){
+        ConexionSQliteHelper conn=new ConexionSQliteHelper(context ,"bdRonqui",null,3);
+        SQLiteDatabase db=conn.getWritableDatabase();
+
+        db.execSQL("delete from "+ Utilidades.TABLA_DATA_VIAJE);
         db.close();
         return true;
     }
