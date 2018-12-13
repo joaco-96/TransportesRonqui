@@ -19,19 +19,19 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/fechaItem"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@android:color/background_dark"
-            android:textSize="20dp"
-            android:textStyle="bold" />
-
-        <TextView
             android:id="@+id/origenItem"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@android:color/background_dark"
-            android:textSize="15dp"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/destinoItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/background_dark"
+            android:textSize="18dp"
             android:textStyle="bold" />
 
         <TextView
@@ -39,7 +39,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@android:color/background_dark"
-            android:textSize="15dp" />
+            android:textSize="16dp" />
 
     </LinearLayout>
 

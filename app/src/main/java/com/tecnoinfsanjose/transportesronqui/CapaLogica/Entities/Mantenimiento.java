@@ -1,28 +1,60 @@
 package com.tecnoinfsanjose.transportesronqui.CapaLogica.Entities;
 
+import java.util.Date;
+
 public class Mantenimiento {
-    String [] PorFecha;
-    String [] PorKm;
+    private int id;
+    private boolean porfecha;
+    private String nombre;
+    private int kmts;
+    private Date fecha;
 
-
-    public Mantenimiento(String[] porFecha, String[] porKm) {
-        PorFecha = porFecha;
-        PorKm = porKm;
+    public Mantenimiento(int id, boolean porfecha, String nombre, int kmts, Date fecha) {
+        this.id = id;
+        this.porfecha = porfecha;
+        this.nombre = nombre;
+        this.kmts = kmts;
+        this.fecha = fecha;
     }
 
-    public String[] getPorFecha() {
-        return PorFecha;
+    public int getId() {
+        return id;
     }
 
-    public void setPorFecha(String[] porFecha) {
-        PorFecha = porFecha;
+    public Date getFecha() {
+        return fecha;
     }
 
-    public String[] getPorKm() {
-        return PorKm;
+    public void setFecha(Date fecha) {
+        this.fecha = fecha;
     }
 
-    public void setPorKm(String[] porKm) {
-        PorKm = porKm;
+    public void setId(int id) {
+
+        this.id = id;
+    }
+
+    public boolean isPorfecha() {
+        return porfecha;
+    }
+
+    public void setPorfecha(boolean porfecha) {
+        this.porfecha = porfecha;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public int getKmts() {
+        return kmts;
+    }
+
+    public void setKmts(int kmts) {
+        this.kmts = kmts;
     }
 }

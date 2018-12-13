@@ -23,11 +23,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-
-        <activity android:name=".CapaPresentacion.MainActivity"
-        android:label=""
-        android:theme="@style/ThemeMain" />
-
+        <activity
+            android:name=".CapaPresentacion.MainActivity"
+            android:label=""
+            android:theme="@style/ThemeMain" />
         <activity android:name=".CapaPresentacion.VerInfoViajeActivity" />
         <activity android:name=".CapaPresentacion.MantenimientoActivity" />
         <activity android:name=".CapaPresentacion.VerViajeActivity" />
@@ -56,6 +55,7 @@
                 android:resource="@xml/provider_paths" />
         </provider>
 
+        <activity android:name=".CapaPresentacion.MantenimientoListaFec"></activity>
     </application>
 
 </manifest>

@@ -85,7 +85,7 @@ public class FotoActivity extends AppCompatActivity {
         final Viaje viaje = (Viaje) getIntent().getExtras().get("Viaje");
         setContentView(R.layout.activity_foto);
         //No abre teclado de entrada
-//        FVFecha.setInputType(InputType.TYPE_NULL);
+        //FVFecha.setInputType(InputType.TYPE_NULL);
 
         FVFecha = (EditText) findViewById(R.id.FVFecha);
         data = new Data_Viaje();
