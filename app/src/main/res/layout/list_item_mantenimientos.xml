@@ -8,8 +8,8 @@
 
     <ImageView
         android:id="@+id/imageViewMant"
-        android:layout_width="48dp"
-        android:layout_height="51dp"
+        android:layout_width="57dp"
+        android:layout_height="55dp"
         android:src="@drawable/brojo" />
 
     <LinearLayout

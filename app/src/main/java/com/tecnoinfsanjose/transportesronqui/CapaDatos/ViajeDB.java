@@ -63,7 +63,7 @@ public class ViajeDB {
         SQLiteDatabase db=conn.getWritableDatabase();
         String[] parametros= {String.valueOf(id)};
 
-        db.delete(Utilidades.TABLA_DATA_VIAJE,Utilidades.DATA_ID+"=?",parametros);
+        db.delete(Utilidades.TABLA_VIAJES,Utilidades.DATA_ID+"=?",parametros);
         db.close();
         return true;
     }

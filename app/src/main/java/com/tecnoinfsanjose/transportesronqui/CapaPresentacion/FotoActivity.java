@@ -31,9 +31,11 @@ import android.widget.Toast;
 
 import com.tecnoinfsanjose.transportesronqui.CapaDatos.DataViajeDB;
 import com.tecnoinfsanjose.transportesronqui.CapaDatos.ViajeDB;
+import com.tecnoinfsanjose.transportesronqui.CapaLogica.Controllers.SincronizacionDatos;
 import com.tecnoinfsanjose.transportesronqui.CapaLogica.Entities.Data_Viaje;
 import com.tecnoinfsanjose.transportesronqui.CapaLogica.Entities.Viaje;
 import com.tecnoinfsanjose.transportesronqui.R;
+import com.tecnoinfsanjose.transportesronqui.Utilidades.Connectivity;
 
 import java.io.File;
 import java.text.ParseException;
@@ -164,6 +166,11 @@ public class FotoActivity extends AppCompatActivity {
                         ViajeDB delete = new ViajeDB();
                         delete.deleteViaje(viaje.getId(),getApplicationContext());
                         Toast.makeText(getApplicationContext(),"Viaje Finalizado Correctamente",Toast.LENGTH_LONG).show();
+                        SincronizacionDatos.Sincroniced(getApplicationContext());
+
+                        Intent intent2 = new Intent (view.getContext(), VerViajeActivity.class);
+                        startActivityForResult(intent2, 0);
+
                     }else{
                         Toast.makeText(getApplicationContext(),"Error al grabar, Contactese con Soporte",Toast.LENGTH_LONG).show();
                     }
@@ -173,6 +180,16 @@ public class FotoActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(),"Campos obligatorios sin llenar",Toast.LENGTH_LONG).show();
                 }
 
+            }
+        });
+
+        cancelar = (Button)findViewById(R.id.btnVolver);
+        cancelar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent (getApplicationContext(), VerInfoViajeActivity.class);
+                intent.putExtra("Viaje", viaje);
+                startActivityForResult(intent, 0);
             }
         });
 
@@ -476,4 +493,6 @@ public class FotoActivity extends AppCompatActivity {
         }
         return null;
     }
+
+    @Override public void onBackPressed() { moveTaskToBack(true); }
 }

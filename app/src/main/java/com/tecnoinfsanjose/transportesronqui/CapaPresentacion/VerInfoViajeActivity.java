@@ -17,7 +17,7 @@ public class VerInfoViajeActivity extends AppCompatActivity {
 
 
     Button FinalizarViaje;
-//    Button volver;
+    Button volver;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,14 +70,16 @@ public class VerInfoViajeActivity extends AppCompatActivity {
 
 
 
-//        volver = (Button)findViewById(R.id.volver1);
-//        volver.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = new Intent (getApplicationContext(), VerViajeActivity.class);
-//                startActivityForResult(intent, 0);
-//            }
-//        });
+        volver = (Button)findViewById(R.id.volver1);
+        volver.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent (getApplicationContext(), VerViajeActivity.class);
+                intent.putExtra("Viaje", viaje);
+                startActivityForResult(intent, 0);
+            }
+        });
 
     }
+    @Override public void onBackPressed() { moveTaskToBack(true); }
 }

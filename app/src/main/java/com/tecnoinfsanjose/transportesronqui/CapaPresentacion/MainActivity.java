@@ -57,15 +57,20 @@ public class MainActivity extends AppCompatActivity {
 
 
         ImageButton Sinc = (ImageButton) findViewById(R.id.SincButton);
-        try {
-            Sinc.setEnabled(SincronizacionDatos.isSincroniced(getApplicationContext()));
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
         Sinc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                SincronizacionDatos.Sincroniced(getApplicationContext());
+                try {
+                    if(!SincronizacionDatos.isSincroniced(getApplicationContext())){
+                        SincronizacionDatos.Sincroniced(getApplicationContext());
+
+                    }
+                    else{
+                        Toast.makeText(getApplicationContext(),"No existen Datos para Sincronizar",Toast.LENGTH_LONG).show();
+                    }
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                }
             }
         });
 

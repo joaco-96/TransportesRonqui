@@ -7,70 +7,62 @@
     tools:context=".CapaPresentacion.MantenimientoActivity">
 
     <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="80dp"
-        android:layout_marginEnd="16dp"
-        android:text="Mantenimiento por fecha"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button5" />
-
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="123dp"
-        android:layout_marginTop="65dp"
-        android:layout_marginEnd="123dp"
-        android:layout_marginBottom="50dp"
-        android:text="Volver"
-        android:background = "@drawable/boton_volver"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button6" />
-
-    <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="50dp"
         android:layout_marginEnd="16dp"
-        android:text="Mantenimiento por kilometros"
-        android:textSize="24sp"
+        android:text="Lista de Mantenimientos por:"
+        android:textAlignment="center"
+        android:textSize="36sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button5"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
+        android:layout_width="275dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="42dp"
+        android:background="@drawable/boton_redondo"
+        android:text="KILOMETROS"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button6" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="275dp"
+        android:layout_height="100dp"
         android:layout_marginStart="42dp"
         android:layout_marginTop="60dp"
         android:layout_marginEnd="42dp"
-        android:text="Ver Mantenimientos"
-        android:background = "@drawable/boton_redondo"
+        android:background="@drawable/boton_redondo"
+        android:text="FECHA"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <Button
-        android:id="@+id/button6"
-        android:layout_width="300dp"
+        android:id="@+id/button4"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="42dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginEnd="42dp"
-        android:text="Ver Mantenimientos"
-        android:background = "@drawable/boton_redondo"
+        android:layout_marginStart="123dp"
+        android:layout_marginTop="85dp"
+        android:layout_marginEnd="123dp"
+        android:background="@drawable/boton_volver"
+        android:text="Volver"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        app:layout_constraintTop_toBottomOf="@+id/button5" />
+
 
 </android.support.constraint.ConstraintLayout>

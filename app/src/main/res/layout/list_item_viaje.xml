@@ -8,12 +8,12 @@
 
     <ImageView
         android:id="@+id/ImagenListItem"
-        android:layout_width="47dp"
-        android:layout_height="47dp"
+        android:layout_width="83dp"
+        android:layout_height="52dp"
         android:src="@drawable/truck" />
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="322dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
         android:orientation="vertical">

@@ -42,4 +42,5 @@ public class MantenimientoActivity extends AppCompatActivity {
             }
         });
     }
+    @Override public void onBackPressed() { moveTaskToBack(true); }
 }
